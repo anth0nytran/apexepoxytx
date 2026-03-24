@@ -1,4 +1,4 @@
-﻿'use client';
+'use client';
 
 import { useMemo, useState, useEffect, type FormEvent } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -648,6 +648,18 @@ export default function JimenezTreeProPage() {
                 </div>
                 <div><label className="block text-xs font-semibold text-slate-700 mb-1">Service Needed *</label><select required name="service" className="w-full rounded-lg border border-slate-200 px-4 py-3 text-sm bg-white text-slate-900"><option value="">Select a service...</option>{[config.primaryService, ...services].map(s => <option key={s} value={s}>{s}</option>)}</select></div>
                 <div><label className="block text-xs font-semibold text-slate-700 mb-1">Project Details</label><textarea name="message" rows={3} placeholder="Describe your project (e.g. Tree removal, storm damage cleanup...)" className="w-full rounded-lg border border-slate-200 bg-white px-4 py-3 text-sm text-slate-900 resize-none" /></div>
+                <div className="flex items-start gap-3 mt-4 mb-2">
+                  <input
+                    type="checkbox"
+                    required
+                    name="consent"
+                    id="consentCheckbox"
+                    className="mt-1 shrink-0 h-4 w-4 rounded border-slate-300 text-blue-600 focus:ring-blue-500"
+                  />
+                  <label htmlFor="consentCheckbox" className="text-xs text-slate-500 leading-relaxed">
+                    By checking this box, you agree to receive text messages from {config.businessName}. You can reply <span className="font-semibold text-slate-700">STOP</span> to opt-out or <span className="font-semibold text-slate-700">HELP</span> for help. Message and data rates may apply. See our <a href="https://quicklaunchweb.us/terms" target="_blank" rel="noopener noreferrer" className="underline hover:text-slate-800">Terms of Service</a> and <a href="https://quicklaunchweb.us/privacy" target="_blank" rel="noopener noreferrer" className="underline hover:text-slate-800">Privacy Policy</a>.
+                  </label>
+                </div>
                 <button type="submit" disabled={formStatus === 'sending'} className="w-full rounded-lg py-4 text-base font-bold text-white shadow-lg disabled:opacity-70 transition-all hover:scale-[1.02] hover:shadow-orange-500/20" style={{ backgroundColor: action }}>
                   {formStatus === 'sending' ? 'Sending...' : 'Request Free Estimate'}
                 </button>
@@ -1201,8 +1213,8 @@ export default function JimenezTreeProPage() {
           <div className="mt-16 flex flex-col items-center justify-between gap-6 border-t border-slate-800 pt-8 text-xs font-medium text-slate-600 md:flex-row">
             <p>&copy; {new Date().getFullYear()} {config.businessName}. All rights reserved.</p>
             <div className="flex items-center gap-6">
-              <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
-              <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
+              <a href="https://quicklaunchweb.us/privacy" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Privacy Policy</a>
+              <a href="https://quicklaunchweb.us/terms" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Terms of Service</a>
               <span className="text-slate-700">|</span>
               <span className="flex items-center gap-1.5">
                 Website by <a href="https://quicklaunchweb.us" target="_blank" rel="noopener noreferrer" className="text-slate-500 hover:text-orange-500 transition-colors">QuickLaunchWeb</a>

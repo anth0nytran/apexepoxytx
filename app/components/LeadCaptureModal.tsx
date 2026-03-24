@@ -140,6 +140,19 @@ export function LeadCaptureModal({
                                         <span>Your information is secure and never shared.</span>
                                     </div>
 
+                                    <div className="flex items-start gap-3 mt-4 mb-2">
+                                        <input
+                                            type="checkbox"
+                                            required
+                                            name="consent"
+                                            id="modalConsentCheckbox"
+                                            className="mt-1 shrink-0 h-4 w-4 rounded border-slate-300 text-blue-600 focus:ring-blue-500"
+                                        />
+                                        <label htmlFor="modalConsentCheckbox" className="text-[10px] text-slate-500 leading-relaxed">
+                                            By checking this box, you agree to receive text messages from {businessName}. You can reply <span className="font-semibold text-slate-700">STOP</span> to opt-out or <span className="font-semibold text-slate-700">HELP</span> for help. Message and data rates may apply. See our <a href="https://quicklaunchweb.us/terms" target="_blank" rel="noopener noreferrer" className="underline hover:text-slate-800">Terms of Service</a> and <a href="https://quicklaunchweb.us/privacy" target="_blank" rel="noopener noreferrer" className="underline hover:text-slate-800">Privacy Policy</a>.
+                                        </label>
+                                    </div>
+
                                     <button
                                         type="submit"
                                         className="mt-2 w-full rounded-lg py-4 text-sm font-black uppercase tracking-widest text-white shadow-lg shadow-amber-500/20 hover:scale-[1.02] active:scale-[0.98] transition-all"
