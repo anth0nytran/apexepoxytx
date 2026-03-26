@@ -17,14 +17,14 @@ const config = {
   founders: 'Beau Scalise & Haden Mcdade',
   foundersTitle: 'Founding Partners | Principal Installers',
   warranty: '5-Year Warranty on Every Job',
-  tagline: 'Warranty-Backed Epoxy Floors You Can Trust',
+  tagline: 'Warranty Backed Epoxy Floors You Can Trust',
 
   services: [
     {
       name: 'Flake Epoxy Floors',
       shortName: 'Flake System',
       headline: 'The #1 Choice for Garage Floors in Cypress',
-      desc: 'Our most popular system. Decorative vinyl flakes are broadcast into high-build epoxy, creating a chip-resistant, easy-to-clean surface that hides imperfections and looks incredible for years.',
+      desc: 'Our most popular system. Decorative vinyl flakes are broadcast into high build epoxy, creating a chip resistant, easy to clean surface that hides imperfections and looks incredible for years.',
       benefits: [
         'Hides cracks, stains & imperfections in concrete',
         'Resists hot tire pickup, chemicals & abrasion',
@@ -39,12 +39,12 @@ const config = {
     {
       name: 'Commercial & Warehouse Floors',
       shortName: 'Shop Floors',
-      headline: 'Heavy-Duty Coatings for Houston Businesses',
-      desc: 'Industrial-strength epoxy systems engineered for high-traffic commercial environments. Our coatings withstand forklifts, chemical spills, and constant foot traffic while maintaining a professional appearance.',
+      headline: 'Heavy Duty Coatings for Houston Businesses',
+      desc: 'Industrial strength epoxy systems engineered for high traffic commercial environments. Our coatings withstand forklifts, chemical spills, and constant foot traffic while maintaining a professional appearance.',
       benefits: [
         'Withstands forklifts & heavy machinery',
         'Chemical & oil resistant surface',
-        'OSHA-compliant safety line striping available',
+        'OSHA compliant safety line striping available',
         'Minimal downtime — fast cure times',
       ],
       ideal: 'Warehouses, Auto Shops, Retail',
@@ -54,10 +54,10 @@ const config = {
       name: 'Patio & Outdoor Coatings',
       shortName: 'Outdoor',
       headline: 'Protect Your Patio from Texas Weather',
-      desc: 'UV-stable polyaspartic coatings designed specifically for outdoor concrete. Our outdoor systems resist fading, cracking, and peeling — even under the brutal Texas sun, rain, and humidity.',
+      desc: 'UV stable polyaspartic coatings designed specifically for outdoor concrete. Our outdoor systems resist fading, cracking, and peeling — even under the brutal Texas sun, rain, and humidity.',
       benefits: [
-        'UV-stable — won\'t yellow or fade',
-        'Slip-resistant texture for wet areas',
+        'UV stable — won\'t yellow or fade',
+        'Slip resistant texture for wet areas',
         'Withstands Texas heat, rain & humidity',
         'Perfect for pool decks & entertainment areas',
       ],
@@ -67,11 +67,11 @@ const config = {
     {
       name: 'Metallic Epoxy Floors',
       shortName: 'Metallic',
-      headline: 'One-of-a-Kind Metallic Finishes',
-      desc: 'Stunning, high-gloss metallic pigments create a flowing, 3D marble effect that is completely unique to your space. The ultimate showpiece floor for homeowners who want something truly special.',
+      headline: 'One of a Kind Metallic Finishes',
+      desc: 'Stunning, high gloss metallic pigments create a flowing, 3D marble effect that is completely unique to your space. The ultimate showpiece floor for homeowners who want something truly special.',
       benefits: [
         'Every floor is 100% unique',
-        'High-gloss, mirror-like finish',
+        'High gloss, mirror like finish',
         'Seamless — no grout lines or seams',
         'Perfect for showrooms & living spaces',
       ],
@@ -81,29 +81,29 @@ const config = {
   ],
 
   process: [
-    { step: '01', title: 'Free Estimate', desc: 'Call or fill out the form. We\'ll schedule a free on-site visit to measure your space and discuss your options — no pressure, no commitment.' },
-    { step: '02', title: 'Surface Prep', desc: 'We diamond-grind your concrete to create the perfect bond profile. Cracks, spalling, and imperfections get repaired before any coating is applied.' },
+    { step: '01', title: 'Free Estimate', desc: 'Call or fill out the form. We\'ll schedule a free on site visit to measure your space and discuss your options — no pressure, no commitment.' },
+    { step: '02', title: 'Surface Prep', desc: 'We apply a Nano Chemical Primer or diamond grind your concrete for the perfect bond. Cracks and imperfections get repaired before coating.' },
     { step: '03', title: 'Coating Application', desc: 'Your chosen system is applied by hand — flake broadcast, metallic pour, or solid color — with precision and attention to detail on every square foot.' },
-    { step: '04', title: 'Final Seal & Walkthrough', desc: 'A UV-stable polyaspartic top coat is applied for long-lasting protection. We walk you through the finished result and make sure you\'re 100% satisfied.' },
+    { step: '04', title: 'Final Seal & Walkthrough', desc: 'A UV stable polyaspartic top coat is applied for long lasting protection. We walk you through the finished result and make sure you\'re 100% satisfied.' },
   ],
 
   whyUs: [
     { icon: 'verified', title: '5-Year Warranty', desc: 'Every job backed by our written 5-year warranty. If there\'s ever an issue, we come back and make it right — period.' },
-    { icon: 'groups', title: 'Owner-Operated', desc: 'Beau & Haden are on every single job site. No subcontractors, no middlemen, no runaround.' },
+    { icon: 'groups', title: 'Owner Operated', desc: 'Beau & Haden are on every single job site. No subcontractors, no middlemen, no runaround.' },
     { icon: 'schedule', title: 'Fast Turnaround', desc: 'Most residential garage floors completed in just 1-2 days. We respect your time and minimize disruption.' },
-    { icon: 'star', title: '100% Solids Epoxy', desc: 'We use industrial-grade, 100% solids epoxy and polyaspartic top coats — not the watered-down big-box store stuff.' },
+    { icon: 'star', title: '100% Solids Epoxy', desc: 'We use industrial grade, 100% solids epoxy and polyaspartic top coats — not the watered down big box store stuff.' },
     { icon: 'shield', title: 'Fully Licensed & Insured', desc: 'Licensed, insured, and committed to protecting your property and your investment from start to finish.' },
     { icon: 'palette', title: 'Custom Color Options', desc: 'Hundreds of flake blends, metallic pigments, and solid color options. Your floor, designed exactly how you want it.' },
   ],
 
   faqs: [
-    { q: 'How long does an epoxy garage floor take in Cypress?', a: 'Most residential garage floors in Cypress take just 1-2 days to complete. Larger commercial or multi-bay projects may take 2-3 days. We always give you a clear timeline before we start so there are no surprises.' },
-    { q: 'How much does epoxy flooring cost in Houston?', a: 'Pricing depends on your space size, concrete condition, and chosen system. A typical 2-car garage in Cypress or Houston ranges from $1,800 to $3,500 for a full flake system. We provide free, no-obligation estimates so you know the exact price upfront.' },
-    { q: 'Do you offer free estimates in the Cypress area?', a: 'Yes! We provide 100% free on-site estimates throughout Cypress, Houston, Katy, The Woodlands, and all surrounding communities. We\'ll measure your space, assess your concrete, discuss options, and give you a clear price — no hidden fees, no pressure.' },
-    { q: 'What\'s included in your 5-year warranty?', a: 'Our warranty covers peeling, delamination, and hot-tire pickup. If there\'s ever an issue with our workmanship, we come back and fix it at no charge — period. We stand behind every floor we install.' },
-    { q: 'Is epoxy flooring slippery when wet?', a: 'Not with our system. We add anti-slip aggregate to the polyaspartic top coat, giving your floor excellent traction even when wet. This is especially important for garage floors and outdoor patios.' },
-    { q: 'What\'s the difference between epoxy and polyaspartic coatings?', a: 'Epoxy is the base coat — it bonds to concrete and provides strength. Polyaspartic is the top coat — it\'s UV-stable, cures faster, and provides the glossy, protective finish. We use both together for maximum durability and performance.' },
-    { q: 'Can you coat outdoor patios and pool decks?', a: 'Absolutely. We use UV-stable polyaspartic coatings specifically designed for outdoor use. They resist fading, cracking, and delamination from Texas sun, rain, and temperature swings.' },
+    { q: 'How long does an epoxy garage floor take in Cypress?', a: 'Most residential garage floors in Cypress take just 1-2 days to complete. Larger commercial or multi bay projects may take 2-3 days. We always give you a clear timeline before we start so there are no surprises.' },
+    { q: 'How much does epoxy flooring cost in Houston?', a: 'Pricing depends on your space size, concrete condition, and chosen system. A typical 2-car garage in Cypress or Houston ranges from $1,800 to $3,500 for a full flake system. We provide free, no obligation estimates so you know the exact price upfront.' },
+    { q: 'Do you offer free estimates in the Cypress area?', a: 'Yes! We provide 100% free on site estimates throughout Cypress, Houston, Katy, The Woodlands, and all surrounding communities. We\'ll measure your space, assess your concrete, discuss options, and give you a clear price — no hidden fees, no pressure.' },
+    { q: 'What\'s included in your 5-year warranty?', a: 'Our warranty covers peeling, delamination, and hot tire pickup. If there\'s ever an issue with our workmanship, we come back and fix it at no charge — period. We stand behind every floor we install.' },
+    { q: 'Is epoxy flooring slippery when wet?', a: 'Not with our system. We add anti slip aggregate to the polyaspartic top coat, giving your floor excellent traction even when wet. This is especially important for garage floors and outdoor patios.' },
+    { q: 'What\'s the difference between epoxy and polyaspartic coatings?', a: 'Epoxy is the base coat — it bonds to concrete and provides strength. Polyaspartic is the top coat — it\'s UV stable, cures faster, and provides the glossy, protective finish. We use both together for maximum durability and performance.' },
+    { q: 'Can you coat outdoor patios and pool decks?', a: 'Absolutely. We use UV stable polyaspartic coatings specifically designed for outdoor use. They resist fading, cracking, and delamination from Texas sun, rain, and temperature swings.' },
     { q: 'What areas in Houston do you serve?', a: 'We\'re based in Cypress and serve the entire Greater Houston metro area including The Woodlands, Katy, Spring, Tomball, Sugar Land, Pearland, Friendswood, League City, and all surrounding communities.' },
   ],
 
@@ -490,9 +490,9 @@ export default function ApexEpoxyPage() {
                 {/* Key selling points — scannable */}
                 <div className="space-y-3.5 sm:space-y-4">
                   {[
-                    { icon: 'science', title: '100% Solids, Industrial-Grade', desc: 'The same epoxy systems used in commercial and industrial applications — not watered-down big-box products.' },
-                    { icon: 'verified', title: '5-Year Written Warranty', desc: 'Covers peeling, delamination, and hot-tire pickup. If there\'s an issue, we come back and fix it.' },
-                    { icon: 'speed', title: 'Done in 1–2 Days', desc: 'Diamond grinding, epoxy base coat, full-broadcast flakes, and UV-stable polyaspartic top coat — all in a weekend.' },
+                    { icon: 'science', title: '100% Solids, Industrial Grade', desc: 'The same epoxy systems used in commercial and industrial applications — not watered down big box products.' },
+                    { icon: 'verified', title: '5-Year Written Warranty', desc: 'Covers peeling, delamination, and hot tire pickup. If there\'s an issue, we come back and fix it.' },
+                    { icon: 'speed', title: 'Done in 1–2 Days', desc: 'Nano Chemical Primer or diamond grinding, epoxy base coat, full broadcast flakes, and UV stable top coat — all in a weekend.' },
                   ].map((point) => (
                     <div key={point.title} className="flex gap-3">
                       <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-lg bg-primary/10 flex items-center justify-center shrink-0 mt-0.5 shadow-[0_0_0_1px_rgba(245,183,49,0.08),0_2px_8px_rgba(0,0,0,0.15)]">
@@ -529,7 +529,7 @@ export default function ApexEpoxyPage() {
           {/* SEO detail — small, quiet, below the fold */}
           <Reveal delay="reveal-delay-2">
             <p className="text-on-surface-variant/30 text-[11px] sm:text-xs leading-[1.8] sm:leading-[1.9] mt-8 sm:mt-10 max-w-4xl mx-auto text-center px-2 sm:px-0">
-              Our most popular service is the flake epoxy garage floor system — a multi-layer coating that includes diamond grinding surface preparation, high-build epoxy base coat, full-broadcast decorative vinyl flakes, and a clear polyaspartic top coat. We serve homeowners and businesses in Cypress, Houston, The Woodlands, Katy, Spring, Tomball, Sugar Land, Pearland, Friendswood, League City, Humble, Kingwood, Atascocita, Conroe, Richmond, and all surrounding communities. Call <a href={`tel:${config.phoneE164}`} className="text-primary/60 font-bold hover:text-primary hover:underline">{config.phone}</a> for a free estimate.
+              Our most popular service is the flake epoxy garage floor system — a multi layer coating that includes Nano Chemical Primer or diamond grinding surface preparation, high build epoxy base coat, full broadcast decorative vinyl flakes, and a clear polyaspartic top coat. We serve homeowners and businesses in Cypress, Houston, The Woodlands, Katy, Spring, Tomball, Sugar Land, Pearland, Friendswood, League City, Humble, Kingwood, Atascocita, Conroe, Richmond, and all surrounding communities. Call <a href={`tel:${config.phoneE164}`} className="text-primary/60 font-bold hover:text-primary hover:underline">{config.phone}</a> for a free estimate.
             </p>
           </Reveal>
         </div>
@@ -707,8 +707,8 @@ export default function ApexEpoxyPage() {
                 <div className="space-y-0">
                   {[
                     { feature: 'Epoxy Type', value: '100% solids, industrial' },
-                    { feature: 'Surface Prep', value: 'Diamond grinding' },
-                    { feature: 'Top Coat', value: 'UV-stable polyaspartic' },
+                    { feature: 'Surface Prep', value: 'Nano Primer or grinding' },
+                    { feature: 'Top Coat', value: 'UV stable polyaspartic' },
                     { feature: 'Warranty', value: '5-year written' },
                     { feature: 'Hot Tire Pickup', value: 'Resistant' },
                     { feature: 'Install Time', value: '1–2 days' },
@@ -738,7 +738,7 @@ export default function ApexEpoxyPage() {
                 </div>
                 <div className="space-y-0">
                   {[
-                    { feature: 'Epoxy Type', value: '50% solids, water-based' },
+                    { feature: 'Epoxy Type', value: '50% solids, water based' },
                     { feature: 'Surface Prep', value: 'Acid etch (weak bond)' },
                     { feature: 'Top Coat', value: 'None included' },
                     { feature: 'Warranty', value: 'None' },
