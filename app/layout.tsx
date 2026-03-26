@@ -26,7 +26,7 @@ const displayFont = Syne({
 export const metadata: Metadata = {
   metadataBase: new URL('https://apexepoxytx.com'),
   title: "Epoxy Garage Floor Coatings Cypress TX | Apex Epoxy & Surface Systems",
-  description: "Professional epoxy garage floor coatings in Cypress & Houston, TX. Flake epoxy, metallic floors, patio coatings & commercial flooring. 5-year warranty. Free estimates. Owner-operated. Call (281) 433-4346.",
+  description: "Professional epoxy garage floor coatings in Cypress & Houston, TX. Flake, metallic & commercial floors. 5-year warranty. Free estimates. Call (281) 433-4346.",
   keywords: [
     'epoxy flooring Cypress TX',
     'garage floor coating Cypress',
@@ -48,16 +48,23 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "Epoxy Garage Floor Coatings in Cypress & Houston TX | Apex Epoxy",
-    description: "Professional epoxy garage floors, metallic finishes, patio coatings & commercial flooring in Cypress & Greater Houston. 5-year warranty. Free estimates. Owner-operated. Call (281) 433-4346.",
+    description: "Professional epoxy garage floors, metallic finishes, patio coatings & commercial flooring in Cypress & Greater Houston. 5-year warranty. Free estimates. Call (281) 433-4346.",
     url: 'https://apexepoxytx.com',
     siteName: 'Apex Epoxy & Surface Systems',
     locale: 'en_US',
     type: 'website',
+    images: [{
+      url: '/pictures/hero.png',
+      width: 1200,
+      height: 630,
+      alt: 'Epoxy garage floor coating by Apex Epoxy & Surface Systems in Cypress TX',
+    }],
   },
   twitter: {
     card: 'summary_large_image',
     title: "Epoxy Floor Coatings Cypress & Houston TX | Apex Epoxy",
     description: "Garage floors, metallic epoxy, patio coatings & commercial flooring. 5-year warranty. Free estimates. Call (281) 433-4346.",
+    images: ['/pictures/hero.png'],
   },
   icons: {
     icon: [
@@ -95,6 +102,8 @@ export default function RootLayout({
               "telephone": "+12814334346",
               "email": "beauscalise@apexepoxytx.com",
               "description": "Professional epoxy garage floor coatings in Cypress & Houston, TX. Flake epoxy, metallic floors, patio coatings, and commercial flooring with 5-year warranty. Owner-operated by Beau Scalise & Haden Mcdade.",
+              "image": "https://apexepoxytx.com/pictures/hero.png",
+              "sameAs": [],
               "founder": [
                 { "@type": "Person", "name": "Beau Scalise" },
                 { "@type": "Person", "name": "Haden Mcdade" }
@@ -134,12 +143,6 @@ export default function RootLayout({
                 "closes": "18:00"
               },
               "priceRange": "$$",
-              "aggregateRating": {
-                "@type": "AggregateRating",
-                "ratingValue": "5.0",
-                "reviewCount": "1",
-                "bestRating": "5"
-              },
               "hasOfferCatalog": {
                 "@type": "OfferCatalog",
                 "name": "Epoxy Flooring Services",
@@ -184,6 +187,16 @@ export default function RootLayout({
                   "@type": "Question",
                   "name": "Is epoxy flooring slippery when wet?",
                   "acceptedAnswer": { "@type": "Answer", "text": "Not with our system. We add anti-slip aggregate to the polyaspartic top coat, giving your floor excellent traction even when wet." }
+                },
+                {
+                  "@type": "Question",
+                  "name": "What's the difference between epoxy and polyaspartic coatings?",
+                  "acceptedAnswer": { "@type": "Answer", "text": "Epoxy is the base coat — it bonds to concrete and provides strength. Polyaspartic is the top coat — it's UV-stable, cures faster, and provides the glossy, protective finish. We use both together for maximum durability and performance." }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Can you coat outdoor patios and pool decks?",
+                  "acceptedAnswer": { "@type": "Answer", "text": "Absolutely. We use UV-stable polyaspartic coatings specifically designed for outdoor use. They resist fading, cracking, and delamination from Texas sun, rain, and temperature swings." }
                 },
                 {
                   "@type": "Question",

@@ -225,7 +225,7 @@ export default function ApexEpoxyPage() {
   const shell = 'max-w-6xl mx-auto px-5 sm:px-6 lg:px-8';
 
   return (
-    <div className="bg-surface text-on-surface noise-overlay">
+    <main className="bg-surface text-on-surface noise-overlay">
 
       {/* ══════ ANNOUNCEMENT BAR ══════ */}
       <div
@@ -383,6 +383,7 @@ export default function ApexEpoxyPage() {
             loop
             playsInline
             poster={config.heroImage}
+            aria-label="Epoxy garage floor coating being professionally installed in a Cypress TX home"
             className="w-full h-full object-cover"
           >
             <source src={config.heroVideo} type="video/mp4" />
@@ -405,7 +406,7 @@ export default function ApexEpoxyPage() {
             </div>
 
             <h1 className="font-headline text-[clamp(2rem,6vw,4.5rem)] font-extrabold tracking-[-0.03em] leading-[1.05] mb-5 sm:mb-6 text-white">
-              WHERE FLOORS<br />BECOME <span className="text-primary">SURFACES.</span>
+              Epoxy Garage Floor<br />Coatings in <span className="text-primary">Cypress &amp; Houston TX</span>
             </h1>
 
             <p className="text-white/70 text-base sm:text-xl max-w-xl mx-auto mb-8 sm:mb-10 leading-relaxed px-2">
@@ -480,7 +481,7 @@ export default function ApexEpoxyPage() {
               <div>
                 <SectionLabel>About Apex Epoxy</SectionLabel>
                 <h2 className="font-headline text-xl sm:text-[2.25rem] font-extrabold tracking-[-0.02em] leading-tight mb-4 sm:mb-5">
-                  Two Guys. One Trade.<br /> Done Right Every Time.
+                  Cypress Epoxy Floor Contractors<br /> Who Do It Right Every Time
                 </h2>
                 <p className="text-on-surface-variant/55 text-sm sm:text-[15px] leading-[1.75] sm:leading-[1.8] mb-5 sm:mb-6">
                   Apex Epoxy &amp; Surface Systems is a locally owned epoxy flooring company based in Cypress, Texas. We specialize in garage floors, commercial coatings, patios, and metallic finishes across the Greater Houston area. Unlike franchises or handyman services, our owners are on every single job.
@@ -869,7 +870,7 @@ export default function ApexEpoxyPage() {
               <div className="sm:max-w-sm shrink-0">
                 <SectionLabel>Service Areas</SectionLabel>
                 <h2 className="font-headline text-lg sm:text-2xl font-extrabold tracking-[-0.02em] leading-tight">
-                  Greater Houston
+                  Epoxy Flooring Service Areas in Greater Houston, TX
                 </h2>
                 <p className="text-on-surface-variant/40 mt-1.5 sm:mt-2 text-[13px] sm:text-sm leading-relaxed">
                   Based in Cypress, TX — serving homeowners and businesses across the metro.
@@ -928,11 +929,14 @@ export default function ApexEpoxyPage() {
                           <Icon name={openFaq === i ? 'remove' : 'add'} className="text-primary !text-[14px]" />
                         </div>
                       </button>
-                      {openFaq === i && (
+                      <div
+                        className="overflow-hidden transition-all duration-300"
+                        style={{ maxHeight: openFaq === i ? '500px' : '0px', opacity: openFaq === i ? 1 : 0 }}
+                      >
                         <div className="pb-4 sm:pb-5 text-on-surface-variant/55 text-[13px] sm:text-sm leading-relaxed">
                           {faq.a}
                         </div>
-                      )}
+                      </div>
                     </div>
                   </Reveal>
                 ))}
@@ -1120,6 +1124,6 @@ export default function ApexEpoxyPage() {
           </p>
         </div>
       </footer>
-    </div>
+    </main>
   );
 }
