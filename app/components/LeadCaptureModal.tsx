@@ -149,7 +149,7 @@ export function LeadCaptureModal({
                                             className="mt-1 shrink-0 h-4 w-4 rounded border-slate-300 text-blue-600 focus:ring-blue-500"
                                         />
                                         <label htmlFor="modalConsentCheckbox" className="text-[10px] text-slate-500 leading-relaxed">
-                                            By checking this box, you agree to receive text messages from {businessName}. You can reply <span className="font-semibold text-slate-700">STOP</span> to opt-out or <span className="font-semibold text-slate-700">HELP</span> for help. Message and data rates may apply. See our <a href="https://quicklaunchweb.us/terms" target="_blank" rel="noopener noreferrer" className="underline hover:text-slate-800">Terms of Service</a> and <a href="https://quicklaunchweb.us/privacy" target="_blank" rel="noopener noreferrer" className="underline hover:text-slate-800">Privacy Policy</a>.
+                                            By checking this box, you agree to receive text messages from {businessName}. You can reply <span className="font-semibold text-slate-700">STOP</span> to opt-out or <span className="font-semibold text-slate-700">HELP</span> for help. Message and data rates may apply. See our <a href="https://apexepoxytx.com/terms" target="_blank" rel="noopener noreferrer" className="underline hover:text-slate-800">Terms of Service</a> and <a href="https://apexepoxytx.com/privacy" target="_blank" rel="noopener noreferrer" className="underline hover:text-slate-800">Privacy Policy</a>.
                                         </label>
                                     </div>
 

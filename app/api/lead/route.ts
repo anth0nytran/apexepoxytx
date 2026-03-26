@@ -194,11 +194,11 @@ export async function POST(req: Request) {
   }).format(new Date());
   const safeName = name || 'Website Form';
   const safeService = service || 'Website Form';
-  const brandName = 'Jimenez Tree Pro';
-  const brandAddress = 'Pasadena, TX';
-  const brandPrimary = '#166534';
-  const brandAccent = '#ea580c';
-  const fromEmail = process.env.LEAD_FROM_EMAIL || 'Jimenez Tree Pro <leads@quicklaunchweb.us>';
+  const brandName = 'Apex Epoxy & Surface Systems';
+  const brandAddress = 'Houston, TX';
+  const brandPrimary = '#937C4F';
+  const brandAccent = '#dec390';
+  const fromEmail = process.env.LEAD_FROM_EMAIL || 'Apex Epoxy & Surface Systems <leads@apexepoxytx.com>';
   const subject = `New Lead: ${safeService} | ${safeName}`;
 
   const pageUrlIsDev =
@@ -233,7 +233,7 @@ export async function POST(req: Request) {
   const text = textLines.join('\n');
   const escapedMessage = message ? escapeHtml(message).replace(/\n/g, '<br />') : '';
   const html = `
-  <div style="background-color:#e2e8f0;margin:0;padding:24px 12px;font-family:'Barlow','Segoe UI',Roboto,Helvetica,Arial,sans-serif;color:#0f172a;">
+  <div style="background-color:#1b1b1c;margin:0;padding:24px 12px;font-family:'Inter','Segoe UI',Roboto,Helvetica,Arial,sans-serif;color:#e4e2e3;">
     <span style="display:none!important;visibility:hidden;opacity:0;color:transparent;height:0;width:0;overflow:hidden;">
       New quote request from ${escapeHtml(safeName)}. Respond quickly.
     </span>
@@ -310,7 +310,7 @@ export async function POST(req: Request) {
       <tr>
         <td style="padding:0 20px 22px;">
           <div style="border-left:4px solid ${brandAccent};padding:12px;background:#f8fafc;border-radius:8px;font-size:12px;color:#475569;line-height:1.5;">
-            This lead came from the Jimenez Tree Pro website form.
+            This lead came from the Apex Epoxy & Surface Systems website form.
             <span style="display:block;margin-top:6px;font-weight:700;color:${brandPrimary};">${brandAddress}</span>
           </div>
         </td>
