@@ -196,8 +196,8 @@ export async function POST(req: Request) {
   const safeService = service || 'Website Form';
   const brandName = 'Apex Epoxy & Surface Systems';
   const brandAddress = 'Houston, TX';
-  const brandPrimary = '#937C4F';
-  const brandAccent = '#dec390';
+  const brandPrimary = '#c99520';
+  const brandAccent = '#F5B731';
   const fromEmail = process.env.LEAD_FROM_EMAIL || 'Apex Epoxy & Surface Systems <leads@apexepoxytx.com>';
   const subject = `New Lead: ${safeService} | ${safeName}`;
 

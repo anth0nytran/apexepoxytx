@@ -1,25 +1,25 @@
 import type { Metadata } from "next";
-import { Manrope, Inter, DM_Serif_Display } from "next/font/google";
+import { Outfit, Plus_Jakarta_Sans, Syne } from "next/font/google";
 import "./globals.css";
 
-const headlineFont = Manrope({
+const headlineFont = Outfit({
   variable: "--font-app-headline",
   subsets: ["latin"],
-  weight: ["400", "600", "700", "800"],
+  weight: ["400", "500", "600", "700", "800", "900"],
   display: "swap",
 });
 
-const bodyFont = Inter({
+const bodyFont = Plus_Jakarta_Sans({
   variable: "--font-app-body",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+  weight: ["400", "500", "600", "700", "800"],
   display: "swap",
 });
 
-const displayFont = DM_Serif_Display({
+const displayFont = Syne({
   variable: "--font-app-display",
   subsets: ["latin"],
-  weight: ["400"],
+  weight: ["400", "500", "600", "700", "800"],
   display: "swap",
 });
 
@@ -60,7 +60,11 @@ export const metadata: Metadata = {
     description: "Garage floors, metallic epoxy, patio coatings & commercial flooring. 5-year warranty. Free estimates. Call (281) 433-4346.",
   },
   icons: {
-    icon: '/favicon.ico',
+    icon: [
+      { url: '/logo_mark_transparent.svg', type: 'image/svg+xml' },
+      { url: '/favicon.ico', sizes: 'any' },
+    ],
+    shortcut: '/logo_mark_transparent.svg',
   },
 };
 
