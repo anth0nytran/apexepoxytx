@@ -8,6 +8,20 @@ const nextConfig: NextConfig = {
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
     remotePatterns: [],
   },
+  async redirects() {
+    return [
+      {
+        source: '/terms',
+        destination: 'https://quicklaunchweb.us/terms',
+        permanent: true,
+      },
+      {
+        source: '/privacy',
+        destination: 'https://quicklaunchweb.us/privacy',
+        permanent: true,
+      },
+    ];
+  },
 };
 
 export default nextConfig;

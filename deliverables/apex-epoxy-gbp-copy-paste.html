@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GBP Copy-Paste Guide — Apex Epoxy & Surface Systems</title>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #f6f4f0;
+    --ink: #0a0a0a;
+    --ink-light: #4a4a4a;
+    --ink-muted: #7a7a7a;
+    --gold: #D4A843;
+    --gold-light: #f5ecd4;
+    --green: #2d6a4f;
+    --green-light: #d4edda;
+    --blue: #2c5282;
+    --blue-light: #d6e4f0;
+    --card-bg: #ffffff;
+    --border: #e0dcd6;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--paper);
+    color: var(--ink);
+    line-height: 1.7;
+    font-size: 15px;
+  }
+
+  body::before {
+    content: '';
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    pointer-events: none;
+    z-index: 9999;
+    opacity: 0.03;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  }
+
+  .container { max-width: 880px; margin: 0 auto; padding: 40px 32px; }
+
+  .cover {
+    text-align: center;
+    padding: 60px 40px 50px;
+    margin-bottom: 48px;
+    border-bottom: 2px solid var(--border);
+  }
+  .cover-label {
+    font-size: 12px; font-weight: 600; letter-spacing: 3px;
+    text-transform: uppercase; color: var(--gold); margin-bottom: 20px;
+  }
+  .cover h1 {
+    font-family: 'Instrument Serif', serif;
+    font-size: 42px; font-weight: 400; line-height: 1.15; margin-bottom: 12px;
+  }
+  .cover .subtitle { font-size: 17px; color: var(--ink-light); margin-bottom: 24px; }
+  .cover .meta { font-size: 13px; color: var(--ink-muted); }
+
+  .section-number {
+    font-family: 'Instrument Serif', serif;
+    font-size: 72px; font-weight: 400; color: var(--gold); opacity: 0.15;
+    line-height: 1; margin-bottom: -12px;
+  }
+
+  h2 {
+    font-family: 'Instrument Serif', serif;
+    font-size: 30px; font-weight: 400; margin-bottom: 6px;
+  }
+  h3 {
+    font-size: 17px; font-weight: 600; margin-bottom: 10px; margin-top: 28px;
+    color: var(--ink);
+  }
+  h4 {
+    font-size: 14px; font-weight: 600; margin-bottom: 6px; margin-top: 16px;
+    color: var(--ink-muted); text-transform: uppercase; letter-spacing: 0.5px;
+  }
+
+  .section-intro { font-size: 15px; color: var(--ink-light); margin-bottom: 28px; }
+
+  section { margin-bottom: 52px; }
+
+  /* Copy blocks */
+  .copy-block {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    margin-bottom: 16px;
+    overflow: hidden;
+  }
+  .copy-block-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 20px;
+    background: #fafaf8;
+    border-bottom: 1px solid var(--border);
+  }
+  .copy-block-label {
+    font-weight: 600; font-size: 13px; color: var(--ink-light);
+    text-transform: uppercase; letter-spacing: 0.5px;
+  }
+  .copy-block-chars {
+    font-size: 12px; color: var(--ink-muted);
+  }
+  .copy-btn {
+    background: var(--ink);
+    color: white;
+    border: none;
+    padding: 6px 14px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: 'DM Sans', sans-serif;
+    transition: background 0.15s;
+  }
+  .copy-btn:hover { background: #333; }
+  .copy-btn.copied { background: var(--green); }
+  .copy-block-content {
+    padding: 16px 20px;
+    font-size: 14px;
+    line-height: 1.7;
+    color: var(--ink-light);
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+
+  /* Service cards */
+  .service-entry {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin-bottom: 10px;
+  }
+  .service-entry .svc-name {
+    font-weight: 700; font-size: 15px; color: var(--ink); margin-bottom: 4px;
+  }
+  .service-entry .svc-desc {
+    font-size: 13px; color: var(--ink-light); line-height: 1.6;
+  }
+  .service-entry .svc-group {
+    font-size: 11px; font-weight: 600; text-transform: uppercase;
+    letter-spacing: 0.5px; color: var(--gold); margin-bottom: 4px;
+  }
+
+  /* Q&A */
+  .qa-item {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin-bottom: 10px;
+  }
+  .qa-item .qa-q {
+    font-weight: 700; font-size: 14px; color: var(--ink); margin-bottom: 6px;
+  }
+  .qa-item .qa-a {
+    font-size: 13px; color: var(--ink-light); line-height: 1.7;
+  }
+  .qa-item .qa-label {
+    font-size: 11px; font-weight: 600; text-transform: uppercase;
+    letter-spacing: 0.5px; margin-bottom: 4px;
+  }
+  .qa-item .qa-label.q-label { color: var(--blue); }
+  .qa-item .qa-label.a-label { color: var(--green); margin-top: 10px; }
+
+  /* Review responses */
+  .review-block {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin-bottom: 10px;
+  }
+  .review-block .stars {
+    color: var(--gold); font-size: 16px; margin-bottom: 4px;
+  }
+  .review-block .review-label {
+    font-weight: 600; font-size: 13px; color: var(--ink); margin-bottom: 8px;
+  }
+  .review-block .review-text {
+    font-size: 13px; color: var(--ink-light); line-height: 1.7;
+    font-style: italic;
+  }
+
+  /* Social bio cards */
+  .social-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 16px;
+  }
+  .social-header {
+    padding: 14px 20px;
+    font-weight: 700;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .social-header.ig { background: linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045); color: white; }
+  .social-header.fb { background: #1877f2; color: white; }
+  .social-body { padding: 16px 20px; }
+  .social-body .bio-text {
+    font-size: 14px; color: var(--ink-light); line-height: 1.7;
+    white-space: pre-wrap; margin-bottom: 12px;
+  }
+  .social-field {
+    font-size: 12px; color: var(--ink-muted); margin-bottom: 4px;
+  }
+  .social-field strong { color: var(--ink-light); }
+
+  .note {
+    background: var(--gold-light);
+    border-radius: 6px;
+    padding: 12px 16px;
+    font-size: 13px;
+    color: var(--ink-light);
+    margin-bottom: 16px;
+  }
+  .note strong { color: var(--ink); }
+
+  .divider { border: none; border-top: 1px solid var(--border); margin: 48px 0; }
+
+  .footer {
+    text-align: center; padding: 40px 0 20px;
+    border-top: 1px solid var(--border); margin-top: 60px;
+    font-size: 13px; color: var(--ink-muted);
+  }
+
+  @media print {
+    body { background: white; }
+    body::before { display: none; }
+    .copy-btn { display: none; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <div class="cover">
+    <div class="cover-label">Copy &amp; Paste Ready</div>
+    <h1>GBP, Social Media &amp;<br>Content Guide</h1>
+    <div class="subtitle">Apex Epoxy & Surface Systems</div>
+    <div class="meta">Everything below is ready to copy and paste directly into your profiles.</div>
+  </div>
+
+  <!-- ========== SECTION 1: BUSINESS DESCRIPTION ========== -->
+  <section>
+    <div class="section-number">01</div>
+    <h2>Business Description</h2>
+    <p class="section-intro">Go to your Google Business Profile &gt; Edit Profile &gt; Business Information &gt; Description. Paste this in.</p>
+
+    <h3>Full Description (750 characters max)</h3>
+    <div class="copy-block">
+      <div class="copy-block-header">
+        <span class="copy-block-label">GBP Description</span>
+        <button class="copy-btn" onclick="copyText(this)">Copy</button>
+      </div>
+      <div class="copy-block-content">Apex Epoxy & Surface Systems is a professional epoxy flooring company serving Cypress, Katy, Houston, The Woodlands, and surrounding areas. Owned and operated by Beau & Haden, we specialize in flake epoxy garage floors, metallic epoxy finishes, commercial floor coatings, and outdoor patio coatings. Every job uses 100% solids industrial-grade epoxy with a UV-stable polyaspartic top coat — no watered-down big box products. Most garage floors are completed in just 1-2 days. We back every installation with a 5-year written warranty covering peeling, delamination, and hot tire pickup. No subcontractors, no middlemen — the owners are on every job site. Call today for a free on-site estimate.</div>
+    </div>
+
+    <h3>"From the Business" Short Summary (250 characters max)</h3>
+    <div class="copy-block">
+      <div class="copy-block-header">
+        <span class="copy-block-label">From the Business</span>
+        <button class="copy-btn" onclick="copyText(this)">Copy</button>
+      </div>
+      <div class="copy-block-content">Owner-operated epoxy flooring company in Cypress & Houston, TX. Flake epoxy, metallic floors, commercial coatings & patio coatings. 100% solids epoxy, 5-year warranty. Most jobs done in 1-2 days. Free estimates — call today!</div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- ========== SECTION 2: CATEGORIES ========== -->
+  <section>
+    <div class="section-number">02</div>
+    <h2>Business Categories</h2>
+    <p class="section-intro">Go to Edit Profile &gt; Business Information &gt; Business Category. Set these exactly.</p>
+
+    <div class="note"><strong>Important:</strong> Only use 1 primary + 2-3 secondaries. More categories dilutes your ranking power. These are the strongest for your business.</div>
+
+    <div class="copy-block">
+      <div class="copy-block-header">
+        <span class="copy-block-label">Primary Category</span>
+        <button class="copy-btn" onclick="copyText(this)">Copy</button>
+      </div>
+      <div class="copy-block-content">Flooring contractor</div>
+    </div>
+
+    <div class="copy-block">
+      <div class="copy-block-header">
+        <span class="copy-block-label">Secondary Categories (add all 3)</span>
+        <button class="copy-btn" onclick="copyText(this)">Copy</button>
+      </div>
+      <div class="copy-block-content">Concrete contractor
+Floor refinishing service
+Coating supplier</div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- ========== SECTION 3: SERVICES ========== -->
+  <section>
+    <div class="section-number">03</div>
+    <h2>Service List</h2>
+    <p class="section-intro">Go to Edit Profile &gt; Services. Delete the old bare listings and add each of these with the descriptions below. Copy the name into the "Service name" field and the description into the "Service description" field.</p>
+
+    <h3>Under: Flooring Contractor</h3>
+
+    <div class="service-entry">
+      <div class="svc-group">Service Name</div>
+      <div class="svc-name">Flake Epoxy Garage Floor Coating</div>
+      <div class="svc-group" style="margin-top: 8px;">Description</div>
+      <div class="svc-desc">Our most popular service. Decorative vinyl flakes broadcast into high-build 100% solids epoxy with a UV-stable polyaspartic top coat. Hides cracks, stains, and imperfections. Resists hot tire pickup, chemicals, and abrasion. Most 2-car garages completed in 1-2 days. Hundreds of flake blends available. 5-year written warranty included.</div>
+    </div>
+
+    <div class="service-entry">
+      <div class="svc-group">Service Name</div>
+      <div class="svc-name">Metallic Epoxy Floor Coating</div>
+      <div class="svc-group" style="margin-top: 8px;">Description</div>
+      <div class="svc-desc">High-gloss metallic pigments create a flowing, one-of-a-kind 3D marble effect. Every metallic floor is 100% unique. Mirror-like finish that transforms garages, showrooms, and living spaces. Applied with industrial-grade epoxy and sealed with a UV-stable polyaspartic top coat for lasting beauty and durability.</div>
+    </div>
+
+    <div class="service-entry">
+      <div class="svc-group">Service Name</div>
+      <div class="svc-name">Commercial & Warehouse Floor Coating</div>
+      <div class="svc-group" style="margin-top: 8px;">Description</div>
+      <div class="svc-desc">Industrial-strength epoxy and polyaspartic floor coating systems built for warehouses, showrooms, restaurants, retail spaces, and workshops. Withstands forklifts, heavy machinery, foot traffic, chemicals, and oil. OSHA-compliant safety striping available. Serving commercial clients throughout Greater Houston.</div>
+    </div>
+
+    <div class="service-entry">
+      <div class="svc-group">Service Name</div>
+      <div class="svc-name">Patio & Outdoor Concrete Coating</div>
+      <div class="svc-group" style="margin-top: 8px;">Description</div>
+      <div class="svc-desc">UV-stable polyaspartic coatings designed for Texas heat and outdoor exposure. Resists fading, cracking, and delamination. Anti-slip texture for wet areas. Perfect for patios, pool decks, walkways, and covered outdoor spaces. Built to handle Houston-area weather year-round.</div>
+    </div>
+
+    <div class="service-entry">
+      <div class="svc-group">Service Name</div>
+      <div class="svc-name">Solid Color Epoxy Floor Coating</div>
+      <div class="svc-group" style="margin-top: 8px;">Description</div>
+      <div class="svc-desc">Clean, uniform single-color epoxy coating for a sleek modern look. 100% solids industrial-grade epoxy with polyaspartic top coat. Available in a wide range of colors. Great for garages, workshops, and commercial spaces that want a clean, professional finish.</div>
+    </div>
+
+    <div class="service-entry">
+      <div class="svc-group">Service Name</div>
+      <div class="svc-name">Concrete Floor Polishing</div>
+      <div class="svc-group" style="margin-top: 8px;">Description</div>
+      <div class="svc-desc">Professional concrete polishing that creates a smooth, high-gloss finish on existing concrete surfaces. Low-maintenance, durable, and ideal for commercial spaces, retail showrooms, and modern residential interiors. Enhances the natural beauty of concrete without coatings.</div>
+    </div>
+
+    <div class="service-entry">
+      <div class="svc-group">Service Name</div>
+      <div class="svc-name">Concrete Surface Preparation & Repair</div>
+      <div class="svc-group" style="margin-top: 8px;">Description</div>
+      <div class="svc-desc">Professional diamond grinding and nano chemical primer surface preparation for optimal coating adhesion. Includes crack repair, joint filling, and surface leveling. Proper prep is the foundation of a long-lasting epoxy floor — we never skip this critical step.</div>
+    </div>
+
+    <div class="service-entry">
+      <div class="svc-group">Service Name</div>
+      <div class="svc-name">Garage Floor Coating</div>
+      <div class="svc-group" style="margin-top: 8px;">Description</div>
+      <div class="svc-desc">Complete garage floor transformation using industrial-grade epoxy and polyaspartic coating systems. Choose from flake, metallic, or solid color finishes. Includes professional surface preparation, crack repair, coating application, and UV-stable top coat. Most garage floors completed in 1-2 days with a 5-year warranty.</div>
+    </div>
+
+    <div class="service-entry">
+      <div class="svc-group">Service Name</div>
+      <div class="svc-name">Epoxy Floor Installation</div>
+      <div class="svc-group" style="margin-top: 8px;">Description</div>
+      <div class="svc-desc">Professional epoxy floor installation for residential and commercial properties throughout Cypress, Katy, Houston, and surrounding areas. 100% solids epoxy — not the watered-down products from big box stores. Owner-operated with no subcontractors. Free on-site estimates available.</div>
+    </div>
+
+    <div class="service-entry">
+      <div class="svc-group">Service Name</div>
+      <div class="svc-name">Polyaspartic Floor Coating</div>
+      <div class="svc-group" style="margin-top: 8px;">Description</div>
+      <div class="svc-desc">Fast-curing, UV-stable polyaspartic floor coatings for garages, patios, and commercial spaces. Superior chemical and abrasion resistance compared to traditional epoxy alone. Cures faster than standard epoxy, allowing for quicker return-to-service times. Anti-slip aggregate included.</div>
+    </div>
+
+    <div class="service-entry">
+      <div class="svc-group">Service Name</div>
+      <div class="svc-name">Free On-Site Estimate</div>
+      <div class="svc-group" style="margin-top: 8px;">Description</div>
+      <div class="svc-desc">100% free, no-obligation on-site estimate for any epoxy flooring, concrete coating, or surface preparation project. We measure your space, discuss your options, and provide a transparent quote. Serving Cypress, Katy, Houston, The Woodlands, and all surrounding areas. Call (281) 433-4346 to schedule.</div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- ========== SECTION 4: Q&A ========== -->
+  <section>
+    <div class="section-number">04</div>
+    <h2>Q&A Section</h2>
+    <p class="section-intro">Go to your Google Business Profile listing on Google Maps (search your business name). Scroll down to "Questions & answers" and click "Ask a question." Post each question from a personal Google account, then answer it from your business account.</p>
+
+    <div class="note"><strong>Why do this?</strong> Google indexes these Q&As. When someone searches "how long does epoxy flooring last in Houston" — your answer can show up. This is free SEO content on your profile.</div>
+
+    <div class="qa-item">
+      <div class="qa-label q-label">Question</div>
+      <div class="qa-q">How long does epoxy flooring last?</div>
+      <div class="qa-label a-label">Answer</div>
+      <div class="qa-a">Our epoxy floor coating systems last 15-20+ years with proper care. We use 100% solids industrial-grade epoxy (not the watered-down kits from hardware stores) sealed with a UV-stable polyaspartic top coat for maximum durability. Every installation comes with a 5-year written warranty covering peeling, delamination, and hot tire pickup.</div>
+    </div>
+
+    <div class="qa-item">
+      <div class="qa-label q-label">Question</div>
+      <div class="qa-q">How much does epoxy garage flooring cost?</div>
+      <div class="qa-label a-label">Answer</div>
+      <div class="qa-a">A typical 2-car garage epoxy floor coating runs between $1,800-$3,500 depending on the size, condition of the concrete, and finish style (flake, metallic, or solid color). We provide 100% free on-site estimates with no obligation — we'll measure your space and give you a transparent quote. Call us at (281) 433-4346 to schedule yours.</div>
+    </div>
+
+    <div class="qa-item">
+      <div class="qa-label q-label">Question</div>
+      <div class="qa-q">How long does it take to install an epoxy garage floor?</div>
+      <div class="qa-label a-label">Answer</div>
+      <div class="qa-a">Most residential garage floors are completed in just 1-2 days. Larger commercial projects typically take 2-3 days. Our process includes professional surface preparation (diamond grinding or nano chemical primer), epoxy application, flake or metallic broadcast, and a UV-stable polyaspartic top coat to seal everything in.</div>
+    </div>
+
+    <div class="qa-item">
+      <div class="qa-label q-label">Question</div>
+      <div class="qa-q">Is epoxy flooring slippery when wet?</div>
+      <div class="qa-label a-label">Answer</div>
+      <div class="qa-a">Not with our system. We add anti-slip aggregate directly into our polyaspartic top coat, which provides excellent traction even when the floor is wet. This is especially important for garage floors where water, oil, and other liquids are common. Safety is built into every floor we install.</div>
+    </div>
+
+    <div class="qa-item">
+      <div class="qa-label q-label">Question</div>
+      <div class="qa-q">What areas do you serve?</div>
+      <div class="qa-label a-label">Answer</div>
+      <div class="qa-a">We serve Cypress, Houston, Katy, The Woodlands, Spring, Tomball, Sugar Land, Pearland, League City, Humble, Kingwood, Conroe, Richmond, Atascocita, and all surrounding areas in Greater Houston. We provide free on-site estimates throughout our entire service area. Give us a call at (281) 433-4346!</div>
+    </div>
+
+    <div class="qa-item">
+      <div class="qa-label q-label">Question</div>
+      <div class="qa-q">What's the difference between epoxy and polyaspartic coatings?</div>
+      <div class="qa-label a-label">Answer</div>
+      <div class="qa-a">Great question! Epoxy is our base coat — it bonds to the concrete and provides the strength and thickness of the system. Polyaspartic is our top coat — it's UV-stable (won't yellow in sunlight), cures faster than epoxy, and adds the glossy protective finish. We use both together as a system for maximum durability and longevity. This combination is what separates a professional installation from DIY kits.</div>
+    </div>
+
+    <div class="qa-item">
+      <div class="qa-label q-label">Question</div>
+      <div class="qa-q">Do you do commercial epoxy flooring?</div>
+      <div class="qa-label a-label">Answer</div>
+      <div class="qa-a">Yes! We install commercial and industrial floor coatings for warehouses, showrooms, restaurants, retail spaces, auto shops, and more. Our commercial systems are designed to withstand forklifts, heavy machinery, chemicals, and high foot traffic. We also offer OSHA-compliant safety striping. Contact us for a free commercial estimate.</div>
+    </div>
+
+    <div class="qa-item">
+      <div class="qa-label q-label">Question</div>
+      <div class="qa-q">Can you coat outdoor patios and pool decks?</div>
+      <div class="qa-label a-label">Answer</div>
+      <div class="qa-a">Absolutely! We use UV-stable polyaspartic coatings specifically designed for outdoor use. They resist fading, cracking, and delamination from Texas heat and weather. We add anti-slip texture for wet areas like pool decks and walkways. Our outdoor coatings are built to handle Houston-area weather year-round.</div>
+    </div>
+
+    <div class="qa-item">
+      <div class="qa-label q-label">Question</div>
+      <div class="qa-q">What kind of warranty do you offer?</div>
+      <div class="qa-label a-label">Answer</div>
+      <div class="qa-a">Every residential installation comes with a 5-year written warranty covering peeling, delamination, and hot tire pickup. If there's ever an issue, we come back and fix it — no questions asked. We're owner-operated (Beau & Haden are on every job), so our reputation is directly tied to the quality of every floor we install.</div>
+    </div>
+
+    <div class="qa-item">
+      <div class="qa-label q-label">Question</div>
+      <div class="qa-q">Why should I hire a professional instead of using a DIY epoxy kit?</div>
+      <div class="qa-label a-label">Answer</div>
+      <div class="qa-a">DIY kits from hardware stores use water-based epoxy that typically lasts 1-3 years before peeling. We use 100% solids industrial-grade epoxy — the same products used in commercial and industrial applications. The biggest difference is surface preparation: we diamond grind or use nano chemical primer to create a proper bond, while DIY kits only recommend acid etching (which doesn't work nearly as well). Our floors last 15-20+ years with a 5-year warranty. The DIY kit has no warranty and often costs more in the long run when you have to redo it.</div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- ========== SECTION 5: REVIEW RESPONSES ========== -->
+  <section>
+    <div class="section-number">05</div>
+    <h2>Review Response Templates</h2>
+    <p class="section-intro">When a customer leaves a review, respond within 24 hours. Swap out [City], [service type], and [their name] with the actual details. These are templates — personalize them.</p>
+
+    <div class="note"><strong>Pro tip:</strong> Always naturally mention the service type and city in your response. Google reads these and it helps your local SEO. "Thank you for trusting us with your garage floor in Katy" is better than just "Thank you!"</div>
+
+    <h3>5-Star Reviews</h3>
+
+    <div class="review-block">
+      <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <div class="review-label">Response Template 1</div>
+      <div class="review-text">Thank you so much, [Name]! It was a pleasure working on your [flake/metallic/solid color] epoxy garage floor in [City]. We love how it turned out — enjoy your new space! If you ever need anything down the road, don't hesitate to reach out. We're always here to help.</div>
+    </div>
+
+    <div class="review-block">
+      <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <div class="review-label">Response Template 2</div>
+      <div class="review-text">We really appreciate this, [Name]! Your [garage floor / patio / commercial floor] in [City] was a great project and we're glad you're happy with the results. Reviews like this mean the world to us — Beau and Haden take a lot of pride in every job. Thank you for choosing Apex Epoxy & Surface Systems!</div>
+    </div>
+
+    <div class="review-block">
+      <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <div class="review-label">Response Template 3</div>
+      <div class="review-text">Thank you for the kind words! We had a great time transforming your [garage/patio/space] in [City]. It's always rewarding to see a customer's reaction to their new floor. We appreciate you trusting us with your project and hope you enjoy it for years to come!</div>
+    </div>
+
+    <h3>4-Star Reviews</h3>
+
+    <div class="review-block">
+      <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9734;</div>
+      <div class="review-label">Response Template</div>
+      <div class="review-text">Thank you for the review, [Name]! We're glad you're happy with your new [epoxy floor / coating] in [City]. We always strive for 5 stars, so if there's anything we could have done better, we'd love to hear about it. Don't hesitate to give us a call — we want to make sure you're 100% satisfied.</div>
+    </div>
+
+    <h3>3-Star Reviews</h3>
+
+    <div class="review-block">
+      <div class="stars">&#9733;&#9733;&#9733;&#9734;&#9734;</div>
+      <div class="review-label">Response Template</div>
+      <div class="review-text">Thank you for your feedback, [Name]. We appreciate you taking the time to share your experience. We hold ourselves to a high standard and want every customer to be completely satisfied. We'd love the opportunity to discuss your concerns — please give Beau a call at (281) 433-4346 so we can make things right.</div>
+    </div>
+
+    <h3>1-2 Star Reviews</h3>
+
+    <div class="review-block">
+      <div class="stars">&#9733;&#9734;&#9734;&#9734;&#9734;</div>
+      <div class="review-label">Response Template</div>
+      <div class="review-text">We're sorry to hear about your experience, [Name]. This is not the standard we set for ourselves, and we take this feedback seriously. We'd like to understand what happened and see how we can resolve this for you. Please reach out to Beau directly at (281) 433-4346 or email beauscalise@apexepoxytx.com. We stand behind our work and want to make this right.</div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- ========== SECTION 6: SERVICE AREAS ========== -->
+  <section>
+    <div class="section-number">06</div>
+    <h2>Service Areas</h2>
+    <p class="section-intro">Go to Edit Profile &gt; Business Information &gt; Location &gt; Service Area. You currently only have 6 areas. Add all of these to maximize the searches you show up in. Google lets you add up to 20 service areas.</p>
+
+    <div class="note"><strong>You currently have:</strong> Katy, Houston, League City, Missouri City, The Woodlands, Cypress. <strong>You're missing all the ones below.</strong> Add every city you're willing to drive to.</div>
+
+    <h3>Add These (from your website)</h3>
+
+    <div class="copy-block">
+      <div class="copy-block-header">
+        <span class="copy-block-label">Cities listed on your website that are NOT on your GBP yet</span>
+        <button class="copy-btn" onclick="copyText(this)">Copy</button>
+      </div>
+      <div class="copy-block-content">Spring, TX
+Tomball, TX
+Sugar Land, TX
+Pearland, TX
+Friendswood, TX
+Humble, TX
+Kingwood, TX
+Conroe, TX
+Richmond, TX
+Atascocita, TX</div>
+    </div>
+
+    <h3>Also Consider Adding</h3>
+
+    <div class="copy-block">
+      <div class="copy-block-header">
+        <span class="copy-block-label">Nearby cities with high homeowner density</span>
+        <button class="copy-btn" onclick="copyText(this)">Copy</button>
+      </div>
+      <div class="copy-block-content">Fulshear, TX
+Rosenberg, TX
+Baytown, TX
+Pasadena, TX
+Magnolia, TX
+Jersey Village, TX
+Bellaire, TX
+West University Place, TX</div>
+    </div>
+
+    <div class="note"><strong>How to add:</strong> Go to your GBP &gt; Edit Profile &gt; Location &gt; Service Area &gt; type in each city name one at a time and select it from the dropdown. Google will auto-suggest — make sure you pick the correct city in Texas.</div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- ========== SECTION 7: ATTRIBUTES ========== -->
+  <section>
+    <div class="section-number">07</div>
+    <h2>Attributes & Profile Fields</h2>
+    <p class="section-intro">Go to Edit Profile &gt; More. Set each of these to fill out your profile 100%.</p>
+
+    <div class="copy-block">
+      <div class="copy-block-header">
+        <span class="copy-block-label">Service Options</span>
+      </div>
+      <div class="copy-block-content">Online estimates: Yes
+Onsite services: Yes</div>
+    </div>
+
+    <div class="copy-block">
+      <div class="copy-block-header">
+        <span class="copy-block-label">Highlights / Attributes to enable</span>
+      </div>
+      <div class="copy-block-content">Identifies as veteran-owned: No (unless applicable)
+Identifies as owner-operated: Yes
+Free estimates: Yes
+Licensed: Yes
+Insured: Yes</div>
+    </div>
+
+    <div class="copy-block">
+      <div class="copy-block-header">
+        <span class="copy-block-label">Payment Methods (if asked)</span>
+      </div>
+      <div class="copy-block-content">Cash, Credit cards, Debit cards, Checks</div>
+    </div>
+
+    <div class="note"><strong>Phone number note:</strong> Your website shows (281) 433-4346 but your GBP currently shows (713) 201-4005. Make sure these match everywhere — Google penalizes inconsistent NAP (Name, Address, Phone). Pick one and use it on GBP, website, and all directories.</div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- ========== SECTION 8: SOCIAL MEDIA BIOS ========== -->
+  <section>
+    <div class="section-number">08</div>
+    <h2>Instagram & Facebook Bios</h2>
+    <p class="section-intro">These bios are written to convert visitors into leads. They match your brand voice, include CTAs, and hit the key trust signals. Copy each field exactly into the corresponding platform settings.</p>
+
+    <!-- INSTAGRAM -->
+    <div class="social-card">
+      <div class="social-header ig">Instagram</div>
+      <div class="social-body">
+        <div class="social-field"><strong>Name (not username):</strong></div>
+        <div class="copy-block" style="margin-bottom: 12px;">
+          <div class="copy-block-header">
+            <span class="copy-block-label">Display Name</span>
+            <button class="copy-btn" onclick="copyText(this)">Copy</button>
+          </div>
+          <div class="copy-block-content">Apex Epoxy | Houston & Cypress TX</div>
+        </div>
+
+        <div class="social-field"><strong>Bio (150 characters max):</strong></div>
+        <div class="copy-block" style="margin-bottom: 12px;">
+          <div class="copy-block-header">
+            <span class="copy-block-label">Instagram Bio</span>
+            <button class="copy-btn" onclick="copyText(this)">Copy</button>
+          </div>
+          <div class="copy-block-content">Epoxy Garage Floors & Concrete Coatings
+Owner-operated | 5-Year Warranty
+Cypress, Katy & Greater Houston TX
+FREE estimates - tap the link below</div>
+        </div>
+
+        <div class="social-field"><strong>Website/Link:</strong></div>
+        <div class="copy-block" style="margin-bottom: 12px;">
+          <div class="copy-block-header">
+            <span class="copy-block-label">Link</span>
+            <button class="copy-btn" onclick="copyText(this)">Copy</button>
+          </div>
+          <div class="copy-block-content">https://www.apexepoxytx.com</div>
+        </div>
+
+        <div class="social-field"><strong>Category:</strong> Contractor</div>
+        <div class="social-field"><strong>Action Button:</strong> Contact &rarr; (281) 433-4346</div>
+        <div class="social-field" style="margin-top:8px;"><strong>Highlight Covers to Create:</strong> Before/After | Our Process | Reviews | Metallic Floors | Flake Floors | Patios</div>
+      </div>
+    </div>
+
+    <!-- FACEBOOK -->
+    <div class="social-card">
+      <div class="social-header fb">Facebook</div>
+      <div class="social-body">
+        <div class="social-field"><strong>Page Name:</strong></div>
+        <div class="copy-block" style="margin-bottom: 12px;">
+          <div class="copy-block-header">
+            <span class="copy-block-label">Page Name</span>
+            <button class="copy-btn" onclick="copyText(this)">Copy</button>
+          </div>
+          <div class="copy-block-content">Apex Epoxy & Surface Systems</div>
+        </div>
+
+        <div class="social-field"><strong>Short Description (255 characters):</strong></div>
+        <div class="copy-block" style="margin-bottom: 12px;">
+          <div class="copy-block-header">
+            <span class="copy-block-label">Short Description</span>
+            <button class="copy-btn" onclick="copyText(this)">Copy</button>
+          </div>
+          <div class="copy-block-content">Professional epoxy garage floor coatings, metallic epoxy, commercial floor coatings & patio coatings in Cypress, Katy, Houston & The Woodlands TX. Owner-operated. 5-year warranty. Free estimates — call today!</div>
+        </div>
+
+        <div class="social-field"><strong>Long Description (About section):</strong></div>
+        <div class="copy-block" style="margin-bottom: 12px;">
+          <div class="copy-block-header">
+            <span class="copy-block-label">About / Long Description</span>
+            <button class="copy-btn" onclick="copyText(this)">Copy</button>
+          </div>
+          <div class="copy-block-content">Apex Epoxy & Surface Systems is an owner-operated epoxy flooring company serving Cypress, Katy, Houston, The Woodlands, and all of Greater Houston.
+
+We're not a franchise — we're Beau & Haden, two guys obsessed with doing this one thing right. We specialize in flake epoxy garage floors, metallic epoxy finishes, commercial floor coatings, and outdoor patio coatings.
+
+Every job uses 100% solids industrial-grade epoxy with a UV-stable polyaspartic top coat. No watered-down products, no subcontractors, no middlemen. The owners are on every job site.
+
+Most garage floors are completed in 1-2 days. Every installation is backed by a 5-year written warranty covering peeling, delamination, and hot tire pickup.
+
+Call (281) 433-4346 or visit apexepoxytx.com for a free on-site estimate.</div>
+        </div>
+
+        <div class="social-field"><strong>CTA Button:</strong> "Get Quote" &rarr; https://www.apexepoxytx.com</div>
+        <div class="social-field"><strong>Category:</strong> Flooring Store / Contractor</div>
+        <div class="social-field"><strong>Phone:</strong> (281) 433-4346</div>
+        <div class="social-field"><strong>Email:</strong> beauscalise@apexepoxytx.com</div>
+        <div class="social-field"><strong>Website:</strong> https://www.apexepoxytx.com</div>
+      </div>
+    </div>
+
+    <div class="note"><strong>Consistency is key:</strong> Your business name, phone number, and website URL should be identical across GBP, Instagram, Facebook, and every other directory. This is called NAP consistency and it's one of the strongest local ranking signals.</div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- ========== SECTION 9: SOCIAL PROFILES LINK ========== -->
+  <section>
+    <div class="section-number">09</div>
+    <h2>Link Social Profiles to GBP</h2>
+    <p class="section-intro">Go to Edit Profile &gt; Business Information &gt; Contact &gt; Social Profiles. Add each one.</p>
+
+    <div class="copy-block">
+      <div class="copy-block-header">
+        <span class="copy-block-label">Social Profiles to Add</span>
+      </div>
+      <div class="copy-block-content">Facebook: [your Facebook page URL]
+Instagram: [your Instagram profile URL]</div>
+    </div>
+
+    <div class="note"><strong>Don't have these set up yet?</strong> Create them first using the bios above, then come back and link them here. Google sees linked social profiles as trust signals that help verify your business is legitimate.</div>
+  </section>
+
+  <div class="footer">
+    <p>Prepared for <strong>Apex Epoxy & Surface Systems</strong></p>
+    <p style="margin-top: 8px; font-size: 11px;">All content is copy-paste ready. Keep this document for reference.</p>
+  </div>
+
+</div>
+
+<script>
+function copyText(btn) {
+  const content = btn.closest('.copy-block').querySelector('.copy-block-content');
+  const text = content.textContent;
+  navigator.clipboard.writeText(text).then(() => {
+    btn.textContent = 'Copied!';
+    btn.classList.add('copied');
+    setTimeout(() => {
+      btn.textContent = 'Copy';
+      btn.classList.remove('copied');
+    }, 2000);
+  });
+}
+</script>
+</body>
+</html>

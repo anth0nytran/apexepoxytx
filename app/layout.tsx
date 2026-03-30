@@ -24,7 +24,7 @@ const displayFont = Syne({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://apexepoxytx.com'),
+  metadataBase: new URL('https://www.apexepoxytx.com'),
   title: "Epoxy Garage Floor Coatings Cypress TX | Apex Epoxy & Surface Systems",
   description: "Professional epoxy garage floor coatings in Cypress & Houston, TX. Flake, metallic & commercial floors. 5-year warranty. Free estimates. Call (281) 433-4346.",
   keywords: [

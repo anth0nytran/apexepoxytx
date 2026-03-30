@@ -1,0 +1,898 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Growth Roadmap — Apex Epoxy & Surface Systems</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300;1,9..40,400&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --ink: #0a0a0a;
+            --paper: #f6f4f0;
+            --accent: #c45d3e;
+            --accent-light: #e8a48e;
+            --gold: #d4a843;
+            --gold-light: #f0d98a;
+            --muted: #8a8580;
+            --divider: #d6d2cc;
+            --card: #fffefa;
+            --shadow: rgba(10, 10, 10, 0.06);
+            --green: #3a7d44;
+            --green-light: #eef6ef;
+            --red: #b94a3e;
+            --blue: #3a6b9f;
+        }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background: var(--paper);
+            color: var(--ink);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+        }
+
+        body::after {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+            pointer-events: none;
+            z-index: 9999;
+        }
+
+        .container {
+            max-width: 880px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Cover */
+        header {
+            padding: 5rem 0 2.5rem;
+            text-align: center;
+            position: relative;
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 1px;
+            height: 80px;
+            background: linear-gradient(to bottom, transparent, var(--gold));
+        }
+
+        .badge {
+            display: inline-block;
+            font-size: 0.62rem;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            color: #fff;
+            background: var(--gold);
+            padding: 0.4rem 1.4rem;
+            border-radius: 100px;
+            font-weight: 500;
+            margin-bottom: 1.5rem;
+        }
+
+        .eyebrow {
+            font-size: 0.68rem;
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+            color: var(--accent);
+            font-weight: 500;
+            margin-bottom: 0.75rem;
+        }
+
+        .eyebrow--gold { color: var(--gold); }
+        .eyebrow--green { color: var(--green); }
+        .eyebrow--blue { color: var(--blue); }
+
+        h1 {
+            font-family: 'Instrument Serif', serif;
+            font-size: clamp(2.2rem, 5vw, 3.6rem);
+            font-weight: 400;
+            line-height: 1.1;
+            letter-spacing: -0.02em;
+            margin-bottom: 1rem;
+        }
+
+        h1 em { color: var(--gold); font-style: italic; }
+
+        .subtitle {
+            font-size: 0.95rem;
+            color: var(--muted);
+            max-width: 520px;
+            margin: 0 auto;
+            line-height: 1.75;
+        }
+
+        .meta-line {
+            margin-top: 1.25rem;
+            font-size: 0.78rem;
+            color: var(--muted);
+        }
+
+        .divider {
+            width: 60px;
+            height: 1px;
+            background: var(--gold);
+            margin: 2.5rem auto;
+        }
+
+        h2 {
+            font-family: 'Instrument Serif', serif;
+            font-size: 1.85rem;
+            font-weight: 400;
+            line-height: 1.2;
+            margin-bottom: 0.5rem;
+        }
+
+        h3 {
+            font-family: 'Instrument Serif', serif;
+            font-size: 1.3rem;
+            font-weight: 400;
+            margin-bottom: 0.4rem;
+        }
+
+        h4 {
+            font-size: 0.78rem;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            margin-bottom: 0.5rem;
+            color: var(--muted);
+        }
+
+        p { margin-bottom: 0.75rem; font-size: 0.9rem; line-height: 1.75; color: #3a3835; }
+        p:last-child { margin-bottom: 0; }
+
+        .section-header { margin-bottom: 1.75rem; }
+
+        section { margin-bottom: 3rem; }
+
+        /* Cards */
+        .card {
+            background: var(--card);
+            border: 1px solid var(--divider);
+            border-radius: 16px;
+            padding: 2rem;
+            position: relative;
+            overflow: hidden;
+            transition: box-shadow 0.3s ease;
+            margin-bottom: 1.25rem;
+        }
+
+        .card:hover { box-shadow: 0 10px 36px var(--shadow); }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0;
+            width: 4px; height: 100%;
+            background: linear-gradient(to bottom, var(--accent), var(--accent-light));
+            border-radius: 4px 0 0 4px;
+        }
+
+        .card--gold::before { background: linear-gradient(to bottom, var(--gold), var(--gold-light)); }
+        .card--green::before { background: linear-gradient(to bottom, var(--green), #6db97a); }
+        .card--blue::before { background: linear-gradient(to bottom, var(--blue), #7baad4); }
+
+        /* Flow connectors */
+        .flow { display: flex; justify-content: center; padding: 0.2rem 0; }
+        .flow svg { color: var(--divider); }
+
+        /* Tags */
+        .tag-row { display: flex; flex-wrap: wrap; gap: 0.45rem; margin-top: 1rem; }
+
+        .tag {
+            font-size: 0.62rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            padding: 0.28rem 0.7rem;
+            border-radius: 100px;
+            background: var(--paper);
+            border: 1px solid var(--divider);
+            color: var(--muted);
+            font-weight: 500;
+        }
+
+        .tag--green { background: #eef6ef; border-color: #a8d5ae; color: var(--green); }
+        .tag--gold { background: #fdf8ec; border-color: #e8d49c; color: #8a7328; }
+        .tag--accent { background: #fdf0ec; border-color: var(--accent-light); color: var(--accent); }
+
+        /* Callout */
+        .callout {
+            background: linear-gradient(135deg, #fdf6f3, #fef9f6);
+            border: 1px dashed var(--accent-light);
+            border-radius: 12px;
+            padding: 1.5rem 1.75rem;
+            margin: 1.25rem 0;
+        }
+
+        .callout--gold {
+            background: linear-gradient(135deg, #fefaf0, #fefcf5);
+            border-color: var(--gold-light);
+        }
+
+        .callout--green {
+            background: linear-gradient(135deg, #f2faf3, #f7fdf8);
+            border-color: #a8d5ae;
+        }
+
+        .callout p { font-size: 0.88rem; }
+
+        /* Lists */
+        .check-list { list-style: none; padding: 0; margin: 0.75rem 0; }
+
+        .check-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.6rem;
+            margin-bottom: 0.6rem;
+            font-size: 0.88rem;
+            line-height: 1.6;
+            color: #3a3835;
+        }
+
+        .check-list li:last-child { margin-bottom: 0; }
+
+        .icon { flex-shrink: 0; font-size: 0.95rem; line-height: 1.55; }
+        .icon--green { color: var(--green); }
+        .icon--gold { color: var(--gold); }
+        .icon--accent { color: var(--accent); }
+        .icon--blue { color: var(--blue); }
+
+        /* Numbered steps */
+        .step-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 28px; height: 28px;
+            border-radius: 50%;
+            background: var(--gold);
+            color: #fff;
+            font-size: 0.72rem;
+            font-weight: 600;
+            flex-shrink: 0;
+            margin-top: 0.1rem;
+        }
+
+        .step-number--green { background: var(--green); }
+        .step-number--accent { background: var(--accent); }
+
+        /* Phase header */
+        .phase-header {
+            display: flex;
+            align-items: baseline;
+            gap: 0.75rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .phase-num {
+            font-family: 'Instrument Serif', serif;
+            font-size: 2.8rem;
+            color: var(--gold);
+            line-height: 1;
+            opacity: 0.25;
+            flex-shrink: 0;
+        }
+
+        .phase-num--green { color: var(--green); }
+        .phase-num--accent { color: var(--accent); }
+        .phase-num--blue { color: var(--blue); }
+
+        /* Two column */
+        .two-col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.25rem;
+            margin: 1rem 0;
+        }
+
+        .col-card {
+            background: var(--card);
+            border: 1px solid var(--divider);
+            border-radius: 12px;
+            padding: 1.25rem 1.5rem;
+        }
+
+        .col-card h4 { margin-bottom: 0.6rem; }
+
+        /* Competitor snapshot table */
+        .table-wrap {
+            overflow-x: auto;
+            margin: 1rem 0;
+            border-radius: 12px;
+            border: 1px solid var(--divider);
+        }
+
+        table { width: 100%; border-collapse: collapse; font-size: 0.82rem; }
+
+        thead { background: #f0ede8; }
+
+        th {
+            padding: 0.7rem 1rem;
+            text-align: left;
+            font-weight: 600;
+            font-size: 0.7rem;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            color: var(--muted);
+            border-bottom: 1px solid var(--divider);
+            white-space: nowrap;
+        }
+
+        td {
+            padding: 0.7rem 1rem;
+            border-bottom: 1px solid #eceae6;
+            color: #3a3835;
+            vertical-align: top;
+        }
+
+        tr:last-child td { border-bottom: none; }
+
+        .highlight-row { background: #fdf8ec; }
+        .highlight-row td { font-weight: 500; color: var(--ink); }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 2.5rem 0 3.5rem;
+            border-top: 1px solid var(--divider);
+        }
+
+        footer p { font-size: 0.72rem; color: var(--muted); letter-spacing: 0.05em; }
+
+        /* Responsive */
+        @media (max-width: 640px) {
+            header { padding: 3.5rem 0 2rem; }
+            .card { padding: 1.5rem 1.25rem; }
+            .two-col { grid-template-columns: 1fr; }
+            table { font-size: 0.75rem; }
+            th, td { padding: 0.5rem 0.65rem; }
+            .phase-num { font-size: 2.2rem; }
+        }
+
+        /* Print */
+        @media print {
+            body::after { display: none; }
+            body { background: #fff; }
+            .card { break-inside: avoid; box-shadow: none; }
+            header::before { display: none; }
+            * { opacity: 1 !important; transform: none !important; animation: none !important; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- ===== COVER ===== -->
+    <header>
+        <span class="badge">Prepared for Apex Epoxy</span>
+        <h1>Your Website Is Live.<br><em>Here's What Comes Next.</em></h1>
+        <p class="subtitle">A step-by-step growth roadmap for Apex Epoxy & Surface Systems — from day one to dominating the Cypress &amp; Houston market.</p>
+        <p class="meta-line">Prepared March 29, 2026 &mdash; QuickLaunchWeb</p>
+    </header>
+
+    <div class="divider"></div>
+
+    <!-- ===== WHERE YOU STAND ===== -->
+    <section>
+        <div class="section-header">
+            <p class="eyebrow eyebrow--gold">Where You Stand Today</p>
+            <h2>You're Already Ahead of Most</h2>
+        </div>
+
+        <div class="card card--gold">
+            <h3>What Your Website Already Does Well</h3>
+            <p>Your site is live, it's fast, and it looks like a real business — not a side hustle. That puts you ahead of the majority of new epoxy contractors in Houston who are running off Facebook pages and Craigslist ads. Here's what's working:</p>
+            <ul class="check-list">
+                <li><span class="icon icon--green">&#10003;</span> <strong>Professional first impression</strong> — dark, premium design with gold accents instantly communicates quality. Visitors trust you before reading a word.</li>
+                <li><span class="icon icon--green">&#10003;</span> <strong>Mobile-optimized</strong> — over 70% of local searches happen on phones. Your site looks great on every screen size.</li>
+                <li><span class="icon icon--green">&#10003;</span> <strong>Fast loading</strong> — slow sites lose 53% of visitors. Yours loads quickly, keeping potential customers engaged.</li>
+                <li><span class="icon icon--green">&#10003;</span> <strong>Clear services &amp; pricing guidance</strong> — you list four distinct services with detailed descriptions, and your FAQ includes real pricing ($1,800–$3,500 for a 2-car garage). Almost no competitor does this. It builds instant trust.</li>
+                <li><span class="icon icon--green">&#10003;</span> <strong>Strong calls-to-action</strong> — phone number and estimate form are visible everywhere. No visitor has to hunt for how to contact you.</li>
+                <li><span class="icon icon--green">&#10003;</span> <strong>SEO foundations in place</strong> — proper page title, meta description, schema markup (LocalBusiness + FAQPage), and 15 service area cities named. Google can read and understand your site.</li>
+                <li><span class="icon icon--green">&#10003;</span> <strong>Comparison table</strong> — your Apex vs. DIY vs. Handyman table is a conversion weapon. It reframes the buying decision in your favor before the customer even calls.</li>
+            </ul>
+            <div class="callout--gold callout">
+                <p><strong>Bottom line:</strong> You have a legitimate business presence online. When someone Googles "epoxy flooring Cypress TX" and lands on your site, they're seeing a company that looks established and trustworthy. That's the foundation everything else builds on.</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="flow"><svg width="2" height="28" viewBox="0 0 2 28" fill="none"><line x1="1" y1="0" x2="1" y2="28" stroke="currentColor" stroke-dasharray="3 3"/></svg></div>
+
+    <!-- ===== WHAT YOUR COMPETITORS LOOK LIKE ===== -->
+    <section>
+        <div class="section-header">
+            <p class="eyebrow">Your Market at a Glance</p>
+            <h2>Who You're Competing Against</h2>
+            <p>The Cypress/Houston epoxy market has 8+ active players. Here's a quick snapshot of the competitive landscape so you know what you're up against — and where the opportunities are.</p>
+        </div>
+
+        <div class="table-wrap">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Competitor</th>
+                        <th>Warranty</th>
+                        <th>Key Differentiator</th>
+                        <th>Your Advantage Over Them</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Floor Shield Houston</strong></td>
+                        <td>15-year</td>
+                        <td>Polyaspartic-only, veteran-led, same-day install</td>
+                        <td>You offer both epoxy + polyaspartic (more options). Their website looks dated.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Mach One Epoxy</strong></td>
+                        <td>Lifetime</td>
+                        <td>5.0 stars (71 reviews), military branding, enterprise clients</td>
+                        <td>They don't target Cypress specifically. You're local to their gap.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Garage Experts (Franchise)</strong></td>
+                        <td>Lifetime</td>
+                        <td>National brand, cabinets + floors, polished website</td>
+                        <td>They're a franchise — no owners on-site. You're the real deal, not a logo.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Sunflower Coatings</strong></td>
+                        <td>10-year</td>
+                        <td>Online estimator, 1-day install, polyaspartic-only</td>
+                        <td>Spread thin across many cities. You own Cypress.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Coat My Slab</strong></td>
+                        <td>10-year</td>
+                        <td>18+ years in business, widest service menu</td>
+                        <td>Your site and branding already look more modern and premium than theirs.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Epoxy Floors Houston</strong></td>
+                        <td>Varies</td>
+                        <td>0% financing, $150 coupon, statewide coverage</td>
+                        <td>You're owner-operated and local. They're volume players.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="callout">
+            <p><strong>The takeaway:</strong> Most of these companies have been around for years, but almost all of them have mediocre websites and rely on reviews + Google Business Profile to drive leads. The path to competing with them isn't about outspending them — it's about being more visible, more trustworthy, and more strategic online. That's exactly what this roadmap covers.</p>
+        </div>
+    </section>
+
+    <div class="flow"><svg width="2" height="28" viewBox="0 0 2 28" fill="none"><line x1="1" y1="0" x2="1" y2="28" stroke="currentColor" stroke-dasharray="3 3"/></svg></div>
+
+    <!-- ===== PHASE 1: GBP ===== -->
+    <section>
+        <div class="section-header">
+            <div class="phase-header">
+                <span class="phase-num">01</span>
+                <div>
+                    <p class="eyebrow eyebrow--green">Now — First 30 Days</p>
+                    <h2>Google Business Profile: Your #1 Growth Lever</h2>
+                </div>
+            </div>
+            <p>This is the single most important thing you can do right now. Your Google Business Profile (GBP) is how you show up in the local map pack — those top 3 results with the map that appear when someone searches "epoxy flooring near me." <strong>This is where 80%+ of local leads come from.</strong></p>
+        </div>
+
+        <div class="card card--green">
+            <h3>Set Up Your GBP the Right Way</h3>
+            <p>If you haven't already, claim and verify your Google Business Profile at <strong>business.google.com</strong>. Then optimize every single field:</p>
+            <ul class="check-list">
+                <li><span class="step-number step-number--green">1</span> <strong>Business name:</strong> Use your exact business name — "Apex Epoxy & Surface Systems." Don't keyword-stuff it (Google penalizes this).</li>
+                <li><span class="step-number step-number--green">2</span> <strong>Primary category:</strong> Set to <strong>"Epoxy Floor Coating Service"</strong> — this is the most specific category available and directly matches buyer intent.</li>
+                <li><span class="step-number step-number--green">3</span> <strong>Secondary categories:</strong> Add "Floor Coating Contractor," "Concrete Contractor," and "Flooring Contractor." These capture additional search queries.</li>
+                <li><span class="step-number step-number--green">4</span> <strong>Service area:</strong> Add every city you serve — Cypress, Houston, The Woodlands, Katy, Spring, Tomball, Sugar Land, Pearland, Friendswood, League City, Humble, Kingwood, Conroe, Richmond. Google shows your listing to searchers in these areas.</li>
+                <li><span class="step-number step-number--green">5</span> <strong>Business description:</strong> Write a 750-character description that naturally includes your key services and cities. Lead with what makes you different: "Owner-operated epoxy flooring company based in Cypress, TX. Beau &amp; Haden are on every job…"</li>
+                <li><span class="step-number step-number--green">6</span> <strong>Services:</strong> Add each service individually — "Flake Epoxy Garage Floors," "Metallic Epoxy Floors," "Commercial &amp; Warehouse Coatings," "Patio &amp; Outdoor Coatings." Include a short description and price range for each.</li>
+                <li><span class="step-number step-number--green">7</span> <strong>Attributes:</strong> Enable every relevant attribute — "Veteran-led" (if applicable), "Locally owned," "Free estimates," "Online appointments."</li>
+                <li><span class="step-number step-number--green">8</span> <strong>Photos:</strong> Upload at least 10 real project photos immediately. Google prioritizes listings with more photos. Include: your logo, a team photo of Beau &amp; Haden on a job site, 3+ before/after shots, close-ups of flake &amp; metallic finishes, and 1-2 exterior shots of homes you've worked on.</li>
+            </ul>
+        </div>
+
+        <div class="card card--green">
+            <h3>The Review Strategy That Wins</h3>
+            <p>Reviews are the #1 ranking factor for the local map pack — and the #1 trust signal for buyers. Your competitors have years of reviews. You need to close that gap fast.</p>
+
+            <div class="callout--green callout">
+                <p><strong>Your target: 25 five-star reviews in 90 days.</strong> That's roughly 2 reviews per week. This alone will transform your GBP visibility.</p>
+            </div>
+
+            <ul class="check-list">
+                <li><span class="icon icon--green">&#10003;</span> <strong>Create a review link shortcut:</strong> In your GBP dashboard, go to "Ask for reviews" to get your direct review link. Save it in your phone and share it after every job.</li>
+                <li><span class="icon icon--green">&#10003;</span> <strong>Ask at the right moment:</strong> The best time is during the final walkthrough when the customer is seeing their new floor for the first time and they're excited. Say something like: <em>"We're a new local business trying to build our reputation — if you're happy with the floor, a Google review would mean the world to us."</em></li>
+                <li><span class="icon icon--green">&#10003;</span> <strong>Follow up by text:</strong> 24 hours after the job, send a quick thank-you text with the direct review link. Keep it personal and short.</li>
+                <li><span class="icon icon--green">&#10003;</span> <strong>Respond to every single review:</strong> Thank each reviewer by name. Mention the specific service ("Thanks for trusting us with your garage floor!") and reference their city ("Great working in the Katy area"). This signals to Google that you're active and local.</li>
+                <li><span class="icon icon--green">&#10003;</span> <strong>Never offer incentives for reviews:</strong> It violates Google's terms and can get your profile suspended. Just ask genuinely and make it easy.</li>
+            </ul>
+        </div>
+
+        <div class="card card--green">
+            <h3>GBP Weekly Habits That Boost Ranking</h3>
+            <p>Google rewards active profiles. Build these into your weekly routine:</p>
+
+            <div class="two-col">
+                <div class="col-card">
+                    <h4>Post Weekly Updates</h4>
+                    <p>Use GBP's "Updates" feature to post once a week. Cycle through these types:</p>
+                    <ul class="check-list">
+                        <li><span class="icon icon--green">&#8226;</span> <strong>Project showcase</strong> — before/after photo with a short caption ("Just finished this 3-car garage in Cypress — full flake system with polyaspartic top coat")</li>
+                        <li><span class="icon icon--green">&#8226;</span> <strong>Offers</strong> — "Free estimates this week for Katy homeowners"</li>
+                        <li><span class="icon icon--green">&#8226;</span> <strong>Educational tips</strong> — "Why 100% solids epoxy lasts 5x longer than big box kits"</li>
+                        <li><span class="icon icon--green">&#8226;</span> <strong>Team photos</strong> — Show Beau &amp; Haden on the job site</li>
+                    </ul>
+                </div>
+                <div class="col-card">
+                    <h4>Upload New Photos Regularly</h4>
+                    <p>Add 2-3 new photos every week. Google tracks photo upload frequency as a ranking signal. Tips:</p>
+                    <ul class="check-list">
+                        <li><span class="icon icon--green">&#8226;</span> Take photos of every single job (before, during, and after)</li>
+                        <li><span class="icon icon--green">&#8226;</span> <strong>Geo-tag your photos</strong> — make sure location services are on when you take them. This ties photos to the service area.</li>
+                        <li><span class="icon icon--green">&#8226;</span> Use descriptive file names before uploading: <em>"flake-epoxy-garage-floor-cypress-tx.jpg"</em></li>
+                        <li><span class="icon icon--green">&#8226;</span> Variety matters — show different services, different homes, close-ups and wide shots</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="card card--green">
+            <h3>GBP Ranking Signals — What Actually Matters</h3>
+            <p>Google ranks local map pack results based on three factors. Here's how to win each one:</p>
+
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Ranking Factor</th>
+                            <th>What It Means</th>
+                            <th>What You Should Do</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Relevance</strong></td>
+                            <td>How well your profile matches the search query</td>
+                            <td>Fill out every field. Use specific service names. Write a keyword-rich description. Add all categories.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Distance</strong></td>
+                            <td>How close you are to the searcher</td>
+                            <td>You can't change your location — but adding all service area cities tells Google where you work. Mention city names in posts and review responses.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Prominence</strong></td>
+                            <td>How well-known and trusted your business is online</td>
+                            <td>Get more reviews (volume + recency). Post weekly. Get listed on Yelp, BBB, Angi, and HomeAdvisor. Make sure your name, address, and phone (NAP) are consistent everywhere.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="callout--green callout">
+                <p><strong>Pro tip — NAP consistency is critical:</strong> Your business name, address, and phone number must be exactly the same on your website, GBP, Yelp, Facebook, and every directory listing. Even small differences ("Suite 100" vs "Ste 100") can confuse Google and hurt your ranking. Pick one format and use it everywhere.</p>
+            </div>
+        </div>
+
+        <div class="tag-row">
+            <span class="tag tag--green">Free to do</span>
+            <span class="tag tag--green">Highest ROI</span>
+            <span class="tag tag--green">Start this week</span>
+        </div>
+    </section>
+
+    <div class="flow"><svg width="2" height="28" viewBox="0 0 2 28" fill="none"><line x1="1" y1="0" x2="1" y2="28" stroke="currentColor" stroke-dasharray="3 3"/></svg></div>
+
+    <!-- ===== PHASE 2: SOCIAL PROOF ===== -->
+    <section>
+        <div class="section-header">
+            <div class="phase-header">
+                <span class="phase-num phase-num--accent">02</span>
+                <div>
+                    <p class="eyebrow">Months 1–3</p>
+                    <h2>Build Social Proof That Sells for You</h2>
+                </div>
+            </div>
+            <p>Right now, your website tells visitors you're great. But there's no outside proof. Every top competitor in your market uses social proof as their #1 conversion tool. Here's how to build yours from scratch.</p>
+        </div>
+
+        <div class="card">
+            <h3>Document Every Single Job</h3>
+            <p>Starting now, treat every project like a case study. This content becomes your most powerful sales tool over time.</p>
+            <ul class="check-list">
+                <li><span class="icon icon--accent">&#10003;</span> <strong>Before photo</strong> — the ugly "before" is what makes the "after" stunning. Cracks, stains, oil spots — capture it all.</li>
+                <li><span class="icon icon--accent">&#10003;</span> <strong>During photo</strong> — shows the process and craftsmanship. Grinding, coating, flake broadcast.</li>
+                <li><span class="icon icon--accent">&#10003;</span> <strong>After photo</strong> — the money shot. Clean, glossy, beautiful. Multiple angles. Get one with the garage door open and natural light.</li>
+                <li><span class="icon icon--accent">&#10003;</span> <strong>Short video clips</strong> — even 15-second phone clips of the finished floor with overhead lights on are powerful on social media.</li>
+                <li><span class="icon icon--accent">&#10003;</span> <strong>Customer quote</strong> — ask the homeowner for a one-sentence reaction. Write it down. Get permission to use it.</li>
+            </ul>
+            <div class="callout">
+                <p><strong>Storage tip:</strong> Create a shared Google Photos album called "Apex Projects." Drop every photo there immediately. Tag by city and service type. In 3 months you'll have a library that most 5-year-old companies would envy.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>Get Listed on Key Directories</h3>
+            <p>Beyond Google, make sure Apex is listed on the platforms homeowners actually use when hiring contractors:</p>
+            <ul class="check-list">
+                <li><span class="step-number step-number--accent">1</span> <strong>Yelp</strong> — create a free business page. Many homeowners cross-check Yelp.</li>
+                <li><span class="step-number step-number--accent">2</span> <strong>Facebook Business Page</strong> — even if you don't post daily, having a page with your info and reviews matters for trust and GBP prominence.</li>
+                <li><span class="step-number step-number--accent">3</span> <strong>Nextdoor</strong> — hugely powerful for local contractors. Neighbors recommend businesses here constantly.</li>
+                <li><span class="step-number step-number--accent">4</span> <strong>BBB (Better Business Bureau)</strong> — signals legitimacy. Even a free listing helps.</li>
+                <li><span class="step-number step-number--accent">5</span> <strong>Angi / HomeAdvisor</strong> — optional, but they drive leads in the home services space.</li>
+            </ul>
+
+            <div class="callout">
+                <p><strong>Remember:</strong> Keep your NAP (Name, Address, Phone) identical on every single listing. This consistency is one of the strongest signals Google uses to rank your Business Profile.</p>
+            </div>
+        </div>
+
+        <div class="tag-row">
+            <span class="tag tag--accent">Builds over time</span>
+            <span class="tag tag--accent">Compounds monthly</span>
+            <span class="tag">Free or low cost</span>
+        </div>
+    </section>
+
+    <div class="flow"><svg width="2" height="28" viewBox="0 0 2 28" fill="none"><line x1="1" y1="0" x2="1" y2="28" stroke="currentColor" stroke-dasharray="3 3"/></svg></div>
+
+    <!-- ===== PHASE 3: CONTENT ===== -->
+    <section>
+        <div class="section-header">
+            <div class="phase-header">
+                <span class="phase-num phase-num--blue">03</span>
+                <div>
+                    <p class="eyebrow eyebrow--blue">Months 3–6</p>
+                    <h2>Content That Captures Search Traffic</h2>
+                </div>
+            </div>
+            <p>Right now you have a single-page website — which is perfect for getting started. But as your business grows, expanding to multiple pages unlocks search traffic your competitors are capturing today.</p>
+        </div>
+
+        <div class="card card--blue">
+            <h3>Where Customers Are Searching (That You're Not Showing Up)</h3>
+            <p>These are real searches happening in your market every month. Each one is a potential customer — and right now, your competitors are the ones showing up.</p>
+
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>What People Search</th>
+                            <th>Intent</th>
+                            <th>Competition</th>
+                            <th>Opportunity</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>"metallic epoxy floor Houston"</td>
+                            <td>Ready to buy</td>
+                            <td>Medium</td>
+                            <td>Dedicated metallic epoxy page would rank</td>
+                        </tr>
+                        <tr>
+                            <td>"epoxy flooring Houston TX"</td>
+                            <td>Ready to buy</td>
+                            <td>High</td>
+                            <td>Houston-specific landing page</td>
+                        </tr>
+                        <tr>
+                            <td>"patio coating Cypress TX"</td>
+                            <td>Ready to buy</td>
+                            <td>Low</td>
+                            <td>Almost no one targets this — easy win</td>
+                        </tr>
+                        <tr>
+                            <td>"polyaspartic vs epoxy garage floor"</td>
+                            <td>Researching</td>
+                            <td>Low</td>
+                            <td>Educational blog post = free traffic</td>
+                        </tr>
+                        <tr>
+                            <td>"epoxy floor cost Houston"</td>
+                            <td>Ready to buy</td>
+                            <td>Medium</td>
+                            <td>You already mention pricing — expand it into a full page</td>
+                        </tr>
+                        <tr>
+                            <td>"commercial epoxy flooring Houston"</td>
+                            <td>Ready to buy</td>
+                            <td>High</td>
+                            <td>Dedicated commercial page needed</td>
+                        </tr>
+                        <tr>
+                            <td>"garage floor coating Katy TX"</td>
+                            <td>Ready to buy</td>
+                            <td>Medium</td>
+                            <td>City-specific page for Katy</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <p>Each of these keywords represents a dedicated page on your website that could rank on Google and bring in leads every month. One page = one keyword target = one new stream of traffic.</p>
+        </div>
+
+        <div class="card card--blue">
+            <h3>The Website Growth Path</h3>
+            <p>When you're ready to expand beyond your current single page, here's the priority order based on what will drive the most leads:</p>
+
+            <ul class="check-list">
+                <li><span class="step-number">1</span> <strong>Before/After Gallery page</strong> — visual proof converts browsers into callers. This is the #1 page visitors want to see on a contractor's site.</li>
+                <li><span class="step-number">2</span> <strong>Individual service pages</strong> — a dedicated page for each service (Flake Epoxy, Metallic, Commercial, Patio) with unique content. Each page targets different search terms.</li>
+                <li><span class="step-number">3</span> <strong>About / Our Story page</strong> — Beau &amp; Haden's story is your competitive moat. No franchise can replicate "owners on every job." This page builds the emotional connection.</li>
+                <li><span class="step-number">4</span> <strong>City landing pages</strong> — dedicated pages for Houston, Katy, The Woodlands, etc. Each targets "[service] + [city]" search terms. This is how your competitors capture traffic across the metro.</li>
+                <li><span class="step-number">5</span> <strong>Blog / Educational content</strong> — "How Much Does Epoxy Flooring Cost?", "Polyaspartic vs Epoxy: Which Is Better?", "How to Maintain Your Epoxy Floor." These attract people researching before they buy.</li>
+            </ul>
+        </div>
+
+        <div class="tag-row">
+            <span class="tag tag--gold">Revenue driver</span>
+            <span class="tag">SEO growth</span>
+            <span class="tag">Long-term traffic</span>
+        </div>
+    </section>
+
+    <div class="flow"><svg width="2" height="28" viewBox="0 0 2 28" fill="none"><line x1="1" y1="0" x2="1" y2="28" stroke="currentColor" stroke-dasharray="3 3"/></svg></div>
+
+    <!-- ===== PHASE 4: ADVANCED ===== -->
+    <section>
+        <div class="section-header">
+            <div class="phase-header">
+                <span class="phase-num">04</span>
+                <div>
+                    <p class="eyebrow eyebrow--gold">Months 6–12</p>
+                    <h2>Advanced Growth Moves</h2>
+                </div>
+            </div>
+            <p>Once your foundation is solid — GBP optimized, reviews coming in, content growing — these are the moves that separate the top 10% of contractors from everyone else.</p>
+        </div>
+
+        <div class="two-col">
+            <div class="col-card">
+                <h4>Conversion Upgrades</h4>
+                <ul class="check-list">
+                    <li><span class="icon icon--gold">&#8226;</span> <strong>Online estimator</strong> — let visitors get a ballpark quote instantly (only one competitor does this)</li>
+                    <li><span class="icon icon--gold">&#8226;</span> <strong>Financing option</strong> — partner with Wisetack or Hearth to offer 0% APR. Removes the biggest objection: "I can't afford it right now."</li>
+                    <li><span class="icon icon--gold">&#8226;</span> <strong>Live chat / text widget</strong> — some visitors won't call. Give them a way to message you instantly.</li>
+                    <li><span class="icon icon--gold">&#8226;</span> <strong>Sticky mobile CTA</strong> — a "Call Now" button that stays visible as visitors scroll on their phone</li>
+                </ul>
+            </div>
+            <div class="col-card">
+                <h4>Reputation &amp; Authority</h4>
+                <ul class="check-list">
+                    <li><span class="icon icon--gold">&#8226;</span> <strong>Video testimonials</strong> — 30-second phone videos of happy customers are worth more than 100 written reviews</li>
+                    <li><span class="icon icon--gold">&#8226;</span> <strong>Google Guaranteed badge</strong> — apply for Google's Local Services Ads. The green checkmark badge is the ultimate trust signal.</li>
+                    <li><span class="icon icon--gold">&#8226;</span> <strong>Social media consistency</strong> — post project photos 2-3x/week on Instagram and Facebook. Use local hashtags (#CypressTX #HoustonContractor)</li>
+                    <li><span class="icon icon--gold">&#8226;</span> <strong>Consider a warranty extension</strong> — your 5-year warranty is solid, but competitors offer 10–15 year and lifetime. If your product supports it, a longer warranty is a strong selling point.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="tag-row">
+            <span class="tag tag--gold">Growth mode</span>
+            <span class="tag tag--gold">Competitive edge</span>
+            <span class="tag">When you're ready</span>
+        </div>
+    </section>
+
+    <div class="flow"><svg width="2" height="28" viewBox="0 0 2 28" fill="none"><line x1="1" y1="0" x2="1" y2="28" stroke="currentColor" stroke-dasharray="3 3"/></svg></div>
+
+    <!-- ===== QUICK-WIN CHECKLIST ===== -->
+    <section>
+        <div class="section-header">
+            <p class="eyebrow eyebrow--green">Your Quick-Win Checklist</p>
+            <h2>Do These 10 Things This Month</h2>
+            <p>No cost, no code changes, no waiting. These are the highest-impact actions you can take right now with what you already have.</p>
+        </div>
+
+        <div class="card card--green">
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Action</th>
+                            <th>Time</th>
+                            <th>Impact</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Claim &amp; fully optimize your Google Business Profile</td>
+                            <td>1 hour</td>
+                            <td style="color:var(--green); font-weight:600;">Massive</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Upload 10+ real project photos to GBP</td>
+                            <td>30 min</td>
+                            <td style="color:var(--green); font-weight:600;">High</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Create your Google review link &amp; save it to your phone</td>
+                            <td>5 min</td>
+                            <td style="color:var(--green); font-weight:600;">High</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Ask your first 5 customers for Google reviews</td>
+                            <td>Ongoing</td>
+                            <td style="color:var(--green); font-weight:600;">Massive</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>Post your first GBP update (before/after photo)</td>
+                            <td>10 min</td>
+                            <td style="color:var(--green); font-weight:600;">High</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>Create a Facebook Business Page with consistent NAP</td>
+                            <td>30 min</td>
+                            <td style="color:var(--gold); font-weight:600;">Medium</td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>Claim your free Yelp business page</td>
+                            <td>15 min</td>
+                            <td style="color:var(--gold); font-weight:600;">Medium</td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td>Register on Nextdoor as a local business</td>
+                            <td>15 min</td>
+                            <td style="color:var(--gold); font-weight:600;">Medium</td>
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td>Start a Google Photos album for all job photos</td>
+                            <td>5 min</td>
+                            <td style="color:var(--gold); font-weight:600;">Builds over time</td>
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td>Set a weekly reminder: "Post to GBP + upload 3 photos"</td>
+                            <td>2 min</td>
+                            <td style="color:var(--green); font-weight:600;">High (compounding)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- ===== CLOSING ===== -->
+    <section style="text-align:center; max-width:600px; margin:0 auto 3rem;">
+        <h2>You've Got the Foundation.<br>Now It's Time to Build On It.</h2>
+        <p style="margin-top:1rem; font-size:0.95rem; color:var(--muted); line-height:1.8;">Your website is live and working. The next 90 days are about building the trust signals — reviews, photos, directory listings — that turn a great website into a lead machine. Every photo you take, every review you collect, every GBP post you publish is an investment that compounds over time. The competitors who dominate your market didn't get there overnight. They got there by being consistent. You're starting with a stronger foundation than most of them had. Now go build on it.</p>
+    </section>
+
+    <footer>
+        <p>GROWTH ROADMAP &mdash; APEX EPOXY &amp; SURFACE SYSTEMS &mdash; MARCH 2026</p>
+        <p style="margin-top:0.5rem;">Prepared by QuickLaunchWeb</p>
+    </footer>
+
+</div>
+
+</body>
+</html>

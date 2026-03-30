@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GBP Optimization Plan — Apex Epoxy & Surface Systems</title>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #f6f4f0;
+    --ink: #1a1a1a;
+    --ink-light: #4a4a4a;
+    --ink-muted: #7a7a7a;
+    --terracotta: #c45d3e;
+    --terracotta-light: #e8a490;
+    --green: #2d6a4f;
+    --green-light: #d4edda;
+    --yellow: #b8860b;
+    --yellow-light: #fff3cd;
+    --red: #c0392b;
+    --red-light: #f8d7da;
+    --blue: #2c5282;
+    --blue-light: #d6e4f0;
+    --card-bg: #ffffff;
+    --border: #e0dcd6;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--paper);
+    color: var(--ink);
+    line-height: 1.7;
+    font-size: 15px;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  body::before {
+    content: '';
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    pointer-events: none;
+    z-index: 9999;
+    opacity: 0.03;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+    background-repeat: repeat;
+    background-size: 256px 256px;
+  }
+
+  .container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 32px;
+  }
+
+  /* Cover */
+  .cover {
+    text-align: center;
+    padding: 80px 40px 60px;
+    margin-bottom: 48px;
+    border-bottom: 2px solid var(--border);
+  }
+  .cover-label {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--terracotta);
+    margin-bottom: 24px;
+  }
+  .cover h1 {
+    font-family: 'Instrument Serif', serif;
+    font-size: 48px;
+    font-weight: 400;
+    line-height: 1.15;
+    color: var(--ink);
+    margin-bottom: 16px;
+  }
+  .cover .subtitle {
+    font-size: 18px;
+    color: var(--ink-light);
+    margin-bottom: 32px;
+  }
+  .cover .meta {
+    font-size: 13px;
+    color: var(--ink-muted);
+  }
+
+  .section-number {
+    font-family: 'Instrument Serif', serif;
+    font-size: 72px;
+    font-weight: 400;
+    color: var(--terracotta);
+    opacity: 0.12;
+    line-height: 1;
+    margin-bottom: -12px;
+  }
+
+  h2 {
+    font-family: 'Instrument Serif', serif;
+    font-size: 32px;
+    font-weight: 400;
+    color: var(--ink);
+    margin-bottom: 8px;
+  }
+  h3 {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 12px;
+    margin-top: 32px;
+  }
+  h4 {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--ink-light);
+    margin-bottom: 8px;
+    margin-top: 20px;
+  }
+
+  .section-intro {
+    font-size: 16px;
+    color: var(--ink-light);
+    margin-bottom: 32px;
+    max-width: 700px;
+  }
+
+  section {
+    margin-bottom: 56px;
+  }
+
+  /* Cards */
+  .card {
+    background: var(--card-bg);
+    border-radius: 8px;
+    border-left: 4px solid var(--terracotta);
+    padding: 24px 28px;
+    margin-bottom: 16px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+  }
+  .card.green { border-left-color: var(--green); }
+  .card.blue { border-left-color: var(--blue); }
+  .card.yellow { border-left-color: var(--yellow); }
+  .card.red { border-left-color: var(--red); }
+
+  .card-title {
+    font-weight: 600;
+    font-size: 16px;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .card p, .card li {
+    color: var(--ink-light);
+    font-size: 14px;
+    line-height: 1.7;
+  }
+  .card ul {
+    list-style: none;
+    padding: 0;
+  }
+  .card ul li {
+    padding: 4px 0 4px 20px;
+    position: relative;
+  }
+  .card ul li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 12px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--terracotta-light);
+  }
+  .card.green ul li::before { background: var(--green); opacity: 0.4; }
+  .card.blue ul li::before { background: var(--blue); opacity: 0.4; }
+
+  /* Tags */
+  .tag {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    padding: 3px 10px;
+    border-radius: 20px;
+    margin-right: 6px;
+  }
+  .tag-critical { background: var(--red-light); color: var(--red); }
+  .tag-high { background: var(--yellow-light); color: var(--yellow); }
+  .tag-ongoing { background: var(--green-light); color: var(--green); }
+  .tag-info { background: var(--blue-light); color: var(--blue); }
+
+  /* Scorecard */
+  .scorecard {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 16px 0 24px;
+    font-size: 14px;
+  }
+  .scorecard th {
+    text-align: left;
+    font-weight: 600;
+    padding: 10px 16px;
+    border-bottom: 2px solid var(--border);
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--ink-muted);
+  }
+  .scorecard td {
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--border);
+    color: var(--ink-light);
+  }
+  .scorecard tr:last-child td { border-bottom: none; }
+  .scorecard .status { font-weight: 600; font-size: 13px; }
+  .status-good { color: var(--green); }
+  .status-warning { color: var(--yellow); }
+  .status-critical { color: var(--red); }
+
+  /* Competitor table */
+  .comp-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 16px 0 24px;
+    font-size: 13px;
+    background: var(--card-bg);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+  }
+  .comp-table th {
+    text-align: left;
+    font-weight: 600;
+    padding: 12px 14px;
+    background: var(--ink);
+    color: white;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  .comp-table td {
+    padding: 10px 14px;
+    border-bottom: 1px solid var(--border);
+    color: var(--ink-light);
+  }
+  .comp-table tr:last-child td { border-bottom: none; }
+  .comp-table tr.you {
+    background: var(--red-light);
+    font-weight: 600;
+  }
+  .comp-table tr.you td { color: var(--red); }
+
+  /* Checklist */
+  .checklist {
+    list-style: none;
+    padding: 0;
+  }
+  .checklist li {
+    padding: 8px 0 8px 32px;
+    position: relative;
+    color: var(--ink-light);
+    font-size: 14px;
+    border-bottom: 1px solid var(--border);
+  }
+  .checklist li:last-child { border-bottom: none; }
+  .checklist li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 12px;
+    width: 18px;
+    height: 18px;
+    border: 2px solid var(--border);
+    border-radius: 4px;
+  }
+
+  /* Post ideas grid */
+  .post-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-top: 16px;
+  }
+  .post-card {
+    background: var(--card-bg);
+    border-radius: 8px;
+    padding: 16px 20px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+  }
+  .post-card .post-type {
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--terracotta);
+    margin-bottom: 6px;
+  }
+  .post-card .post-title {
+    font-weight: 600;
+    font-size: 14px;
+    margin-bottom: 4px;
+  }
+  .post-card p {
+    font-size: 13px;
+    color: var(--ink-muted);
+  }
+
+  /* QR section */
+  .qr-row {
+    display: flex;
+    gap: 32px;
+    justify-content: center;
+    margin: 32px 0;
+    flex-wrap: wrap;
+  }
+  .qr-item {
+    text-align: center;
+    border-radius: 12px;
+    padding: 24px 28px 28px;
+    background: var(--card-bg);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  }
+  .qr-item img {
+    width: 240px;
+    height: auto;
+    margin-bottom: 16px;
+    border-radius: 6px;
+  }
+  .qr-item a {
+    display: block;
+    text-decoration: none;
+  }
+  .qr-item a:hover img { opacity: 0.9; }
+
+  .divider {
+    border: none;
+    border-top: 1px solid var(--border);
+    margin: 48px 0;
+  }
+
+  .footer {
+    text-align: center;
+    padding: 40px 0 20px;
+    border-top: 1px solid var(--border);
+    margin-top: 60px;
+    font-size: 13px;
+    color: var(--ink-muted);
+  }
+
+  @media print {
+    body { background: white; font-size: 12px; }
+    body::before { display: none; }
+    .container { padding: 20px; max-width: 100%; }
+    .cover { padding: 40px 20px 30px; page-break-after: always; }
+    section { page-break-inside: avoid; }
+    .card { box-shadow: none; border: 1px solid #eee; }
+    .post-grid { grid-template-columns: 1fr; }
+    .qr-item { box-shadow: none; border: 1px solid #ddd; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <!-- COVER -->
+  <div class="cover">
+    <div class="cover-label">Google Business Profile Optimization</div>
+    <h1>Apex Epoxy &<br>Surface Systems</h1>
+    <div class="subtitle">Your Roadmap to Ranking Higher on Google Maps</div>
+    <div class="meta">Prepared March 29, 2026 &nbsp;&bull;&nbsp; Katy &amp; Greater Houston, TX</div>
+  </div>
+
+  <!-- SECTION 1: WHERE YOU STAND TODAY -->
+  <section>
+    <div class="section-number">01</div>
+    <h2>Where You Stand Today</h2>
+    <p class="section-intro">We reviewed your Google Business Profile in detail. Here's a snapshot of your current listing and where the biggest opportunities are.</p>
+
+    <table class="scorecard">
+      <thead>
+        <tr><th>Area</th><th>Current Status</th><th>Impact</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Business Name</strong></td>
+          <td class="status status-good">Apex Epoxy & Surface Systems</td>
+          <td>Clean &amp; professional</td>
+        </tr>
+        <tr>
+          <td><strong>Primary Category</strong></td>
+          <td class="status status-warning">Flooring Contractor</td>
+          <td>Good but could be more specific</td>
+        </tr>
+        <tr>
+          <td><strong>Business Description</strong></td>
+          <td class="status status-critical">Missing</td>
+          <td>Google uses this to understand what you do</td>
+        </tr>
+        <tr>
+          <td><strong>Reviews</strong></td>
+          <td class="status status-critical">1 review (5.0 stars)</td>
+          <td>Competitors have 100&ndash;320+ reviews</td>
+        </tr>
+        <tr>
+          <td><strong>Services Listed</strong></td>
+          <td class="status status-warning">4 services, no descriptions</td>
+          <td>Needs keyword-rich descriptions</td>
+        </tr>
+        <tr>
+          <td><strong>Google Posts</strong></td>
+          <td class="status status-critical">None</td>
+          <td>Shows Google you're active</td>
+        </tr>
+        <tr>
+          <td><strong>Photos</strong></td>
+          <td class="status status-warning">Minimal</td>
+          <td>Competitors have 50&ndash;200+ photos</td>
+        </tr>
+        <tr>
+          <td><strong>"From the Business"</strong></td>
+          <td class="status status-critical">Not set</td>
+          <td>Free real estate for keywords</td>
+        </tr>
+        <tr>
+          <td><strong>Q&A Section</strong></td>
+          <td class="status status-critical">Empty</td>
+          <td>Missed keyword-rich content</td>
+        </tr>
+        <tr>
+          <td><strong>Attributes</strong></td>
+          <td class="status status-critical">Not set</td>
+          <td>Helps Google match you to searches</td>
+        </tr>
+        <tr>
+          <td><strong>Social Profiles</strong></td>
+          <td class="status status-critical">Not linked</td>
+          <td>Builds trust signals</td>
+        </tr>
+        <tr>
+          <td><strong>Service Area</strong></td>
+          <td class="status status-good">6 areas set</td>
+          <td>Katy, Houston, League City, Missouri City, The Woodlands, Cypress</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="card red">
+      <div class="card-title">Overall GBP Health: Needs Significant Work</div>
+      <p>Your profile is verified and has a perfect 5-star rating &mdash; that's a great foundation. But with only 1 review, no description, no posts, and no attributes, Google doesn't have enough information to rank you in local search results. The good news: every one of these gaps is fixable, and closing them will have a direct impact on your visibility.</p>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- SECTION 2: COMPETITIVE LANDSCAPE -->
+  <section>
+    <div class="section-number">02</div>
+    <h2>Your Local Competition</h2>
+    <p class="section-intro">These are the companies currently dominating Google Maps for epoxy flooring searches in your service area. This is who you need to outperform to reach the local 3-pack.</p>
+
+    <table class="comp-table">
+      <thead>
+        <tr>
+          <th>Company</th>
+          <th>Rating</th>
+          <th>Reviews</th>
+          <th>Description</th>
+          <th>Posts</th>
+          <th>Photos</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="you">
+          <td>Apex Epoxy & Surface Systems (You)</td>
+          <td>5.0</td>
+          <td>1</td>
+          <td>None</td>
+          <td>None</td>
+          <td>Few</td>
+        </tr>
+        <tr>
+          <td>GarageExperts of West Houston</td>
+          <td>4.9</td>
+          <td>320+</td>
+          <td>Yes</td>
+          <td>Active</td>
+          <td>981+</td>
+        </tr>
+        <tr>
+          <td>Platinum Floor Coatings</td>
+          <td>5.0</td>
+          <td>115+</td>
+          <td>Yes</td>
+          <td>Active</td>
+          <td>100+</td>
+        </tr>
+        <tr>
+          <td>Epoxy Technology Coatings</td>
+          <td>4.6</td>
+          <td>53+</td>
+          <td>Yes</td>
+          <td>Active</td>
+          <td>168+</td>
+        </tr>
+        <tr>
+          <td>MACH ONE Epoxy Floors</td>
+          <td>5.0</td>
+          <td>50+</td>
+          <td>Yes</td>
+          <td>Active</td>
+          <td>100+</td>
+        </tr>
+        <tr>
+          <td>Global Garage Flooring & Design</td>
+          <td>4.8</td>
+          <td>80+</td>
+          <td>Yes</td>
+          <td>Active</td>
+          <td>200+</td>
+        </tr>
+        <tr>
+          <td>Garage Floor Coatings of Houston</td>
+          <td>4.7</td>
+          <td>60+</td>
+          <td>Yes</td>
+          <td>Active</td>
+          <td>100+</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="card">
+      <div class="card-title">What the Top Performers All Have in Common</div>
+      <ul>
+        <li><strong>100+ Google reviews minimum</strong> &mdash; the top competitor (GarageExperts) has 320+. Review count is the single biggest differentiator.</li>
+        <li><strong>Detailed business descriptions</strong> packed with service keywords and location names</li>
+        <li><strong>Active Google Posts</strong> &mdash; weekly or biweekly project showcases, tips, and offers</li>
+        <li><strong>Hundreds of photos</strong> &mdash; before/after shots, team photos, project variety. GarageExperts has 981+ photos.</li>
+        <li><strong>Owner replies to every review</strong> &mdash; fast, personalized, with natural keyword usage</li>
+        <li><strong>Complete service lists</strong> with descriptions for each individual service</li>
+        <li><strong>Lifetime warranties</strong> prominently mentioned &mdash; builds trust and click-through</li>
+      </ul>
+    </div>
+
+    <div class="card yellow">
+      <div class="card-title">Your Biggest Gaps vs. Competitors</div>
+      <ul>
+        <li><strong>Reviews:</strong> You have 1. The average competitor has 100+. This is the #1 priority.</li>
+        <li><strong>Description:</strong> Every competitor has a keyword-rich description. Yours is empty.</li>
+        <li><strong>Photos:</strong> Competitors have 100&ndash;980+ photos. You need to start uploading consistently.</li>
+        <li><strong>Posts:</strong> Every top competitor posts regularly. You have zero posts.</li>
+        <li><strong>Service detail:</strong> Your 4 services have no descriptions. Competitors list 10-15+ services with full descriptions.</li>
+      </ul>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- SECTION 3: WHAT WE OPTIMIZED -->
+  <section>
+    <div class="section-number">03</div>
+    <h2>What We Optimized For You</h2>
+    <p class="section-intro">Here's everything we've done (or will complete) as part of your one-time GBP optimization. These are the foundational changes that set you up to compete.</p>
+
+    <div class="card">
+      <div class="card-title">Business Description</div>
+      <p>We wrote a keyword-rich, compelling business description (750 characters) that tells Google exactly what you do, where you serve, and why customers should choose you. Keywords targeted: epoxy flooring, garage floor coatings, concrete polishing, metallic epoxy, Katy TX, Houston area.</p>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Category Optimization</div>
+      <p>We reviewed and recommended the strongest primary and secondary categories based on what your top-ranking competitors use. This ensures you appear in the right searches.</p>
+      <ul>
+        <li><strong>Primary:</strong> Evaluate "Flooring Contractor" vs. more specific options</li>
+        <li><strong>Add secondaries:</strong> Concrete Contractor, Floor Refinishing Service, Coating Supplier</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Expanded Service List with Descriptions</div>
+      <p>We expanded your services from 4 bare listings to a complete, keyword-optimized service catalog. Each service now has a search-friendly description.</p>
+      <ul>
+        <li>Residential Epoxy Garage Flooring</li>
+        <li>Commercial Epoxy Floor Coatings</li>
+        <li>Metallic Epoxy Flooring</li>
+        <li>Epoxy Flake Floor Systems</li>
+        <li>Concrete Floor Polishing</li>
+        <li>Concrete Staining &amp; Sealing</li>
+        <li>Industrial Floor Coatings</li>
+        <li>Polyaspartic Floor Coatings</li>
+        <li>Garage Floor Preparation &amp; Repair</li>
+        <li>Decorative Concrete Coatings</li>
+        <li>Showroom &amp; Retail Floor Coatings</li>
+        <li>Warehouse &amp; Shop Floor Coatings</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Profile Completeness</div>
+      <p>We filled in every available field on your profile to hit 100% completeness:</p>
+      <ul>
+        <li>"From the Business" section with keyword-rich summary</li>
+        <li>All relevant business attributes set</li>
+        <li>Service options configured</li>
+        <li>Social media profiles linked</li>
+        <li>Hours verified and optimized</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Q&A Section Seeded</div>
+      <p>We populated your Q&A with 10 frequently asked questions and detailed, keyword-rich answers. This gives Google more content to index and helps customers find answers before they call.</p>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Review Response Templates</div>
+      <p>We created custom review response templates for every star rating (5-star, 4-star, 3-star, 1-2 star). Each response naturally includes your services and location for keyword benefit. Templates have been provided separately.</p>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- SECTION 4: WHAT YOU NEED TO DO -->
+  <section>
+    <div class="section-number">04</div>
+    <h2>What You Need to Do</h2>
+    <p class="section-intro">The optimization we've done builds the foundation &mdash; but your ongoing actions are what will actually move you up the rankings. These are the habits that separate businesses that rank from those that don't.</p>
+
+    <h3><span class="tag tag-critical">Most Important</span> Get More Reviews</h3>
+
+    <div class="card red">
+      <div class="card-title">Ask Every Single Customer for a Google Review</div>
+      <p>This is the #1 thing that will move the needle. You have 1 review. Your closest competitor has 53. The top competitor has 320+. Every new review is a direct ranking signal to Google.</p>
+      <ul>
+        <li><strong>After every job:</strong> Text or email your Google review link (see QR code below)</li>
+        <li><strong>In person:</strong> "We'd really appreciate a Google review &mdash; it helps other homeowners find us. Can I text you the link?"</li>
+        <li><strong>Target:</strong> 4&ndash;8 new reviews per month minimum</li>
+        <li><strong>Timing:</strong> Ask the same day the job is done, while they're still excited about their new floor</li>
+        <li><strong>Make it easy:</strong> Text them the link directly &mdash; one tap to leave a review</li>
+        <li><strong>Milestone targets:</strong> 25 reviews by month 3, 50 by month 6, 100 by year 1</li>
+      </ul>
+    </div>
+
+    <h3><span class="tag tag-high">High Impact</span> Post Regularly</h3>
+
+    <div class="card yellow">
+      <div class="card-title">Post to Google at Least Once a Week</div>
+      <p>Google Posts show up directly on your profile and signal that your business is active. Every competitor posts regularly &mdash; you need to as well. You can do this right from the Google Business Profile app on your phone.</p>
+      <ul>
+        <li><strong>Easiest method:</strong> Take a photo of a completed project, write 2-3 sentences about it, hit post</li>
+        <li><strong>Include your location:</strong> "Just finished this garage in Katy" or "Beautiful metallic floor for a Cypress homeowner"</li>
+        <li><strong>Add a call-to-action:</strong> "Call for a free estimate" or "Book your consultation today"</li>
+        <li><strong>Mix it up:</strong> Project showcases, before/afters, tips, seasonal offers</li>
+        <li><strong>It doesn't have to be perfect:</strong> A quick phone photo with a real caption beats no post at all</li>
+      </ul>
+    </div>
+
+    <h3><span class="tag tag-high">High Impact</span> Upload Photos Consistently</h3>
+
+    <div class="card yellow">
+      <div class="card-title">Take Photos of Every Project &mdash; Upload 5-10 Per Month</div>
+      <p>GarageExperts has 981+ photos. Platinum Floor Coatings has 100+. Photos drive engagement and Google tracks your photo count vs. competitors.</p>
+      <ul>
+        <li><strong>Before &amp; after shots</strong> of every floor (this is your best content)</li>
+        <li><strong>In-progress shots</strong> showing the team at work</li>
+        <li><strong>Close-up detail shots</strong> of metallic swirls, flake patterns, glossy finishes</li>
+        <li><strong>Team photos</strong> &mdash; people trust faces</li>
+        <li><strong>Variety matters:</strong> Different angles, different project types, residential and commercial</li>
+        <li><strong>Target:</strong> 50+ photos on your profile within 3 months</li>
+      </ul>
+    </div>
+
+    <h3><span class="tag tag-ongoing">Ongoing</span> Respond to Every Review</h3>
+
+    <div class="card green">
+      <div class="card-title">Reply Within 24 Hours &mdash; Every Single Time</div>
+      <p>Google tracks your response rate and response time. Every top competitor responds to reviews. Use the templates we provided, and always mention the type of work and location naturally.</p>
+      <ul>
+        <li><strong>Example:</strong> "Thank you! It was a pleasure installing your new epoxy garage floor in Katy. We love how the metallic finish turned out &mdash; enjoy your new space!"</li>
+        <li><strong>For negative reviews:</strong> Stay professional, offer to resolve offline, never argue publicly</li>
+        <li><strong>Even a short response counts</strong> &mdash; Google cares that you respond, not how long it is</li>
+      </ul>
+    </div>
+
+    <h3><span class="tag tag-ongoing">Ongoing</span> Keep Your Profile Updated</h3>
+
+    <div class="card green">
+      <div class="card-title">Monthly Maintenance (10 minutes)</div>
+      <ul>
+        <li>Add any new services you start offering</li>
+        <li>Update hours for holidays or seasonal changes</li>
+        <li>Check that your phone, website, and address info are still accurate</li>
+        <li>Check your GBP Insights to see if impressions are increasing</li>
+        <li>Link any new social media accounts</li>
+      </ul>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- SECTION 5: POST IDEAS -->
+  <section>
+    <div class="section-number">05</div>
+    <h2>Google Post Ideas to Get You Started</h2>
+    <p class="section-intro">Take a project photo, pair it with one of these captions, and post it from the Google Business Profile app. Fill in the city name and details for each project.</p>
+
+    <div class="post-grid">
+      <div class="post-card">
+        <div class="post-type">Project Showcase</div>
+        <div class="post-title">Garage Floor Transformation</div>
+        <p>"Another garage floor transformation complete in [City]! This homeowner chose our [flake/metallic/solid] epoxy system for a durable, beautiful finish. Ready to transform your garage? Call us for a free estimate! (713) 201-4005"</p>
+      </div>
+      <div class="post-card">
+        <div class="post-type">Educational</div>
+        <div class="post-title">Why Epoxy Over Paint?</div>
+        <p>"Thinking about your garage floor? Here's why professional epoxy beats paint every time: 5x more durable, chemical resistant, easy to clean, and looks incredible. Serving Katy, Houston &amp; surrounding areas."</p>
+      </div>
+      <div class="post-card">
+        <div class="post-type">Before &amp; After</div>
+        <div class="post-title">See the Difference</div>
+        <p>"Check out this transformation! This [City] garage went from cracked, stained concrete to a showroom-quality floor. Our process takes just 1-2 days. Book your free consultation today!"</p>
+      </div>
+      <div class="post-card">
+        <div class="post-type">Seasonal</div>
+        <div class="post-title">Spring Garage Season</div>
+        <p>"Spring is the perfect time to upgrade your garage floor! The weather is ideal for epoxy curing. Serving Katy, Cypress, The Woodlands &amp; all of Greater Houston. Call (713) 201-4005!"</p>
+      </div>
+      <div class="post-card">
+        <div class="post-type">Commercial</div>
+        <div class="post-title">Commercial Floors</div>
+        <p>"We don't just do residential! Our commercial floor coatings are built for warehouses, showrooms, restaurants &amp; more. Durable, slip-resistant, professionally installed. Serving Greater Houston."</p>
+      </div>
+      <div class="post-card">
+        <div class="post-type">Social Proof</div>
+        <div class="post-title">Customer Spotlight</div>
+        <p>"Another happy customer in [City]! '[Short quote from customer]' Reviews like this make it all worth it. Thank you for trusting Apex Epoxy &amp; Surface Systems!"</p>
+      </div>
+      <div class="post-card">
+        <div class="post-type">Tips</div>
+        <div class="post-title">Floor Care Tips</div>
+        <p>"How to keep your epoxy floor looking new: 1) Sweep regularly 2) Mop with mild soap &amp; water 3) Avoid harsh chemicals 4) Use mats under heavy equipment. Questions? We're here to help!"</p>
+      </div>
+      <div class="post-card">
+        <div class="post-type">Behind the Scenes</div>
+        <div class="post-title">Our Process</div>
+        <p>"Here's how we do it: Diamond grind &rarr; Prime &rarr; Apply epoxy system &rarr; Top coat. Every step matters for a floor that lasts 15+ years. See why Houston homeowners trust Apex Epoxy!"</p>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- SECTION 6: QR CODES -->
+  <section>
+    <div class="section-number">06</div>
+    <h2>Your QR Codes</h2>
+    <p class="section-intro">Print these and keep them handy. Use the review QR code on invoices, business cards, follow-up emails, or even a sign in your vehicle. The easier you make it for customers to leave a review, the more reviews you'll get.</p>
+
+    <div class="qr-row">
+      <div class="qr-item">
+        <img src="qr-google-review.png" alt="QR Code - Leave a Google Review">
+        <div class="qr-label">Google Review</div>
+        <div class="qr-sub">Customers scan to leave you a review</div>
+        <a class="qr-download review-btn" href="qr-google-review.png" download="Apex-Epoxy-Review-QR.png">Download</a>
+      </div>
+      <div class="qr-item">
+        <img src="qr-website.png" alt="QR Code - Visit Our Website">
+        <div class="qr-label">Website</div>
+        <div class="qr-sub">apexepoxytx.com</div>
+        <a class="qr-download website-btn" href="qr-website.png" download="Apex-Epoxy-Website-QR.png">Download</a>
+      </div>
+    </div>
+
+    <div class="card blue">
+      <div class="card-title">How to Use These QR Codes</div>
+      <ul>
+        <li><strong>Business cards:</strong> Print the review QR code on the back of your cards</li>
+        <li><strong>Invoices &amp; receipts:</strong> Add the review QR code with "Loved your new floor? Leave us a review!"</li>
+        <li><strong>Follow-up texts:</strong> After a job, text the review link along with a thank you</li>
+        <li><strong>Vehicle signage:</strong> Add the website QR code to your truck or trailer wrap</li>
+        <li><strong>Yard signs:</strong> Include the website QR code on any job-site signage</li>
+        <li><strong>Social media:</strong> Share the review QR code periodically asking for feedback</li>
+      </ul>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- SECTION 7: QUICK REFERENCE -->
+  <section>
+    <div class="section-number">07</div>
+    <h2>Quick-Reference Checklist</h2>
+    <p class="section-intro">Print this page and stick it on your wall. These are the habits that will steadily move you up the rankings.</p>
+
+    <div class="card red">
+      <div class="card-title">After Every Job (2 minutes)</div>
+      <ul class="checklist">
+        <li>Text the customer your Google review link</li>
+        <li>Take 3&ndash;5 photos of the completed project (before &amp; after)</li>
+      </ul>
+    </div>
+
+    <div class="card yellow">
+      <div class="card-title">Weekly (5&ndash;10 minutes)</div>
+      <ul class="checklist">
+        <li>Post 1 Google Post with a project photo and caption</li>
+        <li>Upload 2&ndash;3 new photos to your GBP</li>
+        <li>Respond to any new reviews within 24 hours</li>
+      </ul>
+    </div>
+
+    <div class="card green">
+      <div class="card-title">Monthly (10 minutes)</div>
+      <ul class="checklist">
+        <li>Check your GBP Insights &mdash; are impressions going up?</li>
+        <li>Review how many calls and direction requests you're getting</li>
+        <li>Make sure your hours and info are still accurate</li>
+        <li>Add any new services you've started offering</li>
+      </ul>
+    </div>
+
+    <div class="card" style="margin-top: 24px; border-left-color: var(--blue);">
+      <div class="card-title">What "Good" Looks Like After 6 Months</div>
+      <ul>
+        <li><strong>Reviews:</strong> 25&ndash;50 total (up from 1)</li>
+        <li><strong>Photos:</strong> 75&ndash;100+ on your profile</li>
+        <li><strong>Posts:</strong> 24+ published Google Posts</li>
+        <li><strong>Search visibility:</strong> Noticeable increase in Google Maps appearances</li>
+        <li><strong>Customer actions:</strong> More calls, direction requests, and website clicks from Google</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <p>Prepared for <strong>Apex Epoxy & Surface Systems</strong> &bull; (713) 201-4005</p>
+    <p>Katy, Houston, League City, Missouri City, The Woodlands &amp; Cypress, TX</p>
+    <p style="margin-top: 12px; font-size: 11px;">This document is confidential and prepared exclusively for the named client.</p>
+  </div>
+
+</div>
+</body>
+</html>

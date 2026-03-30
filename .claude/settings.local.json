@@ -1,11 +1,17 @@
 {
   "permissions": {
     "allow": [
-      "Bash(npx next dev:*)"
+      "Bash(npx next dev:*)",
+      "mcp__plugin_playwright_playwright__browser_navigate",
+      "mcp__plugin_playwright_playwright__browser_take_screenshot",
+      "WebFetch(domain:www.apexepoxytx.com)",
+      "WebSearch",
+      "WebFetch(domain:www.garagefloorcoatingsofhouston.com)",
+      "Bash(curl -sI -L https://www.apexepoxytx.com)"
     ]
   },
+  "enableAllProjectMcpServers": true,
   "enabledMcpjsonServers": [
     "n8n-mcp"
-  ],
-  "enableAllProjectMcpServers": true
+  ]
 }
