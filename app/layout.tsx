@@ -26,7 +26,7 @@ const displayFont = Syne({
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.apexepoxytx.com'),
   title: "Epoxy Garage Floor Coatings Cypress TX | Apex Epoxy & Surface Systems",
-  description: "Professional epoxy garage floor coatings in Cypress & Houston, TX. Flake, metallic & commercial floors. 5-year warranty. Free estimates. Call (281) 433-4346.",
+  description: "Professional epoxy garage floor coatings in Cypress & Houston, TX. Flake, metallic & commercial floors. 10-year warranty. Free estimates. Call (281) 433-4346.",
   keywords: [
     'epoxy flooring Cypress TX',
     'garage floor coating Cypress',
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "Epoxy Garage Floor Coatings in Cypress & Houston TX | Apex Epoxy",
-    description: "Professional epoxy garage floors, metallic finishes, patio coatings & commercial flooring in Cypress & Greater Houston. 5-year warranty. Free estimates. Call (281) 433-4346.",
+    description: "Professional epoxy garage floors, metallic finishes, patio coatings & commercial flooring in Cypress & Greater Houston. 10-year warranty. Free estimates. Call (281) 433-4346.",
     url: 'https://apexepoxytx.com',
     siteName: 'Apex Epoxy & Surface Systems',
     locale: 'en_US',
@@ -63,7 +63,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: "Epoxy Floor Coatings Cypress & Houston TX | Apex Epoxy",
-    description: "Garage floors, metallic epoxy, patio coatings & commercial flooring. 5-year warranty. Free estimates. Call (281) 433-4346.",
+    description: "Garage floors, metallic epoxy, patio coatings & commercial flooring. 10-year warranty. Free estimates. Call (281) 433-4346.",
     images: ['/pictures/hero.png'],
   },
   icons: {
@@ -101,7 +101,7 @@ export default function RootLayout({
               "url": "https://apexepoxytx.com",
               "telephone": "+12814334346",
               "email": "beauscalise@apexepoxytx.com",
-              "description": "Professional epoxy garage floor coatings in Cypress & Houston, TX. Flake epoxy, metallic floors, patio coatings, and commercial flooring with 5-year warranty. Owner-operated by Beau Scalise & Haden Mcdade.",
+              "description": "Professional epoxy garage floor coatings in Cypress & Houston, TX. Flake epoxy, metallic floors, patio coatings, and commercial flooring with 10-year warranty. Owner-operated by Beau Scalise & Haden Mcdade.",
               "image": "https://apexepoxytx.com/pictures/hero.png",
               "sameAs": [],
               "founder": [
@@ -180,7 +180,7 @@ export default function RootLayout({
                 },
                 {
                   "@type": "Question",
-                  "name": "What's included in the 5-year epoxy floor warranty?",
+                  "name": "What's included in the 10-year epoxy floor warranty?",
                   "acceptedAnswer": { "@type": "Answer", "text": "Our warranty covers peeling, delamination, and hot-tire pickup. If there's an issue with our workmanship, we come back and fix it at no charge." }
                 },
                 {

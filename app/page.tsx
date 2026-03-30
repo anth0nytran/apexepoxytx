@@ -16,7 +16,7 @@ const config = {
   serviceArea: 'Cypress & Greater Houston',
   founders: 'Beau Scalise & Haden Mcdade',
   foundersTitle: 'Founding Partners | Principal Installers',
-  warranty: '5-Year Warranty on Every Job',
+  warranty: '10-Year Warranty on Every Job',
   tagline: 'Warranty Backed Epoxy Floors You Can Trust',
 
   services: [
@@ -31,7 +31,7 @@ const config = {
         'Easy to sweep, mop, or hose clean',
         'Hundreds of color & flake combinations',
         'Completed in just 1-2 days',
-        'Backed by our 5-year warranty',
+        'Backed by our 10-year warranty',
       ],
       ideal: 'Garages, Workshops, Laundry Rooms',
       image: '/pictures/service1.png',
@@ -88,7 +88,7 @@ const config = {
   ],
 
   whyUs: [
-    { icon: 'verified', title: '5-Year Warranty', desc: 'Every job backed by our written 5-year warranty. If there\'s ever an issue, we come back and make it right — period.' },
+    { icon: 'verified', title: '10-Year Warranty', desc: 'Every job backed by our written 10-year warranty. If there\'s ever an issue, we come back and make it right — period.' },
     { icon: 'groups', title: 'Owner Operated', desc: 'Beau & Haden are on every single job site. No subcontractors, no middlemen, no runaround.' },
     { icon: 'schedule', title: 'Fast Turnaround', desc: 'Most residential garage floors completed in just 1-2 days. We respect your time and minimize disruption.' },
     { icon: 'star', title: '100% Solids Epoxy', desc: 'We use industrial grade, 100% solids epoxy and polyaspartic top coats — not the watered down big box store stuff.' },
@@ -100,7 +100,7 @@ const config = {
     { q: 'How long does an epoxy garage floor take in Cypress?', a: 'Most residential garage floors in Cypress take just 1-2 days to complete. Larger commercial or multi bay projects may take 2-3 days. We always give you a clear timeline before we start so there are no surprises.' },
     { q: 'How much does epoxy flooring cost in Houston?', a: 'Pricing depends on your space size, concrete condition, and chosen system. A typical 2-car garage in Cypress or Houston ranges from $1,800 to $3,500 for a full flake system. We provide free, no obligation estimates so you know the exact price upfront.' },
     { q: 'Do you offer free estimates in the Cypress area?', a: 'Yes! We provide 100% free on site estimates throughout Cypress, Houston, Katy, The Woodlands, and all surrounding communities. We\'ll measure your space, assess your concrete, discuss options, and give you a clear price — no hidden fees, no pressure.' },
-    { q: 'What\'s included in your 5-year warranty?', a: 'Our warranty covers peeling, delamination, and hot tire pickup. If there\'s ever an issue with our workmanship, we come back and fix it at no charge — period. We stand behind every floor we install.' },
+    { q: 'What\'s included in your 10-year warranty?', a: 'Our warranty covers peeling, delamination, and hot tire pickup. If there\'s ever an issue with our workmanship, we come back and fix it at no charge — period. We stand behind every floor we install.' },
     { q: 'Is epoxy flooring slippery when wet?', a: 'Not with our system. We add anti slip aggregate to the polyaspartic top coat, giving your floor excellent traction even when wet. This is especially important for garage floors and outdoor patios.' },
     { q: 'What\'s the difference between epoxy and polyaspartic coatings?', a: 'Epoxy is the base coat — it bonds to concrete and provides strength. Polyaspartic is the top coat — it\'s UV stable, cures faster, and provides the glossy, protective finish. We use both together for maximum durability and performance.' },
     { q: 'Can you coat outdoor patios and pool decks?', a: 'Absolutely. We use UV stable polyaspartic coatings specifically designed for outdoor use. They resist fading, cracking, and delamination from Texas sun, rain, and temperature swings.' },
@@ -430,7 +430,7 @@ export default function ApexEpoxyPage() {
           {/* Desktop — 4 columns */}
           <div className={`${shell} hidden sm:grid grid-cols-4 py-3.5`}>
             {[
-              { icon: 'verified', text: '5-Year Written Warranty' },
+              { icon: 'verified', text: '10-Year Written Warranty' },
               { icon: 'groups', text: 'Owners On Every Job' },
               { icon: 'shield', text: 'Licensed & Fully Insured' },
               { icon: 'science', text: '100% Solids Epoxy' },
@@ -445,7 +445,7 @@ export default function ApexEpoxyPage() {
           <div className="sm:hidden overflow-x-auto scrollbar-hide">
             <div className="flex items-center gap-5 px-5 py-3 w-max">
               {[
-                { icon: 'verified', text: '5-Yr Warranty' },
+                { icon: 'verified', text: '10-Yr Warranty' },
                 { icon: 'groups', text: 'Owners On Site' },
                 { icon: 'shield', text: 'Insured' },
                 { icon: 'science', text: '100% Solids' },
@@ -491,7 +491,7 @@ export default function ApexEpoxyPage() {
                 <div className="space-y-3.5 sm:space-y-4">
                   {[
                     { icon: 'science', title: '100% Solids, Industrial Grade', desc: 'The same epoxy systems used in commercial and industrial applications — not watered down big box products.' },
-                    { icon: 'verified', title: '5-Year Written Warranty', desc: 'Covers peeling, delamination, and hot tire pickup. If there\'s an issue, we come back and fix it.' },
+                    { icon: 'verified', title: '10-Year Written Warranty', desc: 'Covers peeling, delamination, and hot tire pickup. If there\'s an issue, we come back and fix it.' },
                     { icon: 'speed', title: 'Done in 1–2 Days', desc: 'Nano Chemical Primer or diamond grinding, epoxy base coat, full broadcast flakes, and UV stable top coat — all in a weekend.' },
                   ].map((point) => (
                     <div key={point.title} className="flex gap-3">
@@ -514,7 +514,7 @@ export default function ApexEpoxyPage() {
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-y-6 mt-10 sm:mt-16 border-t border-outline-variant/8 pt-8 sm:pt-10">
               {[
                 { value: '100%', label: 'Solids Epoxy' },
-                { value: '5-Year', label: 'Written Warranty' },
+                { value: '10-Year', label: 'Written Warranty' },
                 { value: '1–2 Day', label: 'Typical Install' },
                 { value: '15+', label: 'Cities Served' },
               ].map((stat) => (
@@ -578,7 +578,7 @@ export default function ApexEpoxyPage() {
                       <span className="text-[8px] sm:text-[9px] uppercase tracking-[0.12em] sm:tracking-[0.2em] text-white/70 font-bold truncate">{svc.ideal}</span>
                       <span className="text-[8px] sm:text-[9px] uppercase tracking-[0.1em] sm:tracking-[0.15em] text-primary font-bold flex items-center gap-1 shrink-0 whitespace-nowrap">
                         <Icon name="verified" className="text-[10px] sm:text-xs" />
-                        5-Yr Warranty
+                        10-Yr Warranty
                       </span>
                     </div>
                   </div>
@@ -709,7 +709,7 @@ export default function ApexEpoxyPage() {
                     { feature: 'Epoxy Type', value: '100% solids, industrial' },
                     { feature: 'Surface Prep', value: 'Nano Primer or grinding' },
                     { feature: 'Top Coat', value: 'UV stable polyaspartic' },
-                    { feature: 'Warranty', value: '5-year written' },
+                    { feature: 'Warranty', value: '10-year written' },
                     { feature: 'Hot Tire Pickup', value: 'Resistant' },
                     { feature: 'Install Time', value: '1–2 days' },
                     { feature: 'Lifespan', value: '15–20+ years' },
