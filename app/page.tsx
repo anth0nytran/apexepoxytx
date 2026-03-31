@@ -8,8 +8,8 @@ import { motion } from 'framer-motion';
 ──────────────────────────────────────────── */
 const config = {
   businessName: 'Apex Epoxy & Surface Systems',
-  phone: '(281) 433-4346',
-  phoneE164: '+12814334346',
+  phone: '(713) 201-4005',
+  phoneE164: '+17132014005',
   email: 'beauscalise@apexepoxytx.com',
   hours: '6AM - 6PM, 7 Days a Week',
   city: 'Cypress, TX',
@@ -326,7 +326,7 @@ export default function ApexEpoxyPage() {
             </button>
             <a
               href={`tel:${config.phoneE164}`}
-              className="bg-primary hover:bg-[#f7c84a] text-on-primary font-bold px-5 sm:px-6 py-2.5 rounded-lg text-[10px] sm:text-[11px] uppercase tracking-[0.08em] transition-all duration-300 hover:shadow-[0_4px_16px_rgba(245,183,49,0.2)] flex items-center gap-2"
+              className="premium-gradient hover:bg-[#F5C642] text-on-primary font-bold px-5 sm:px-6 py-2.5 rounded-lg text-[10px] sm:text-[11px] uppercase tracking-[0.08em] transition-all duration-300 hover:shadow-[0_4px_16px_rgba(235,182,36,0.2)] flex items-center gap-2"
             >
               <Icon name="call" className="!text-[13px]" />
               Call Now
@@ -362,7 +362,7 @@ export default function ApexEpoxyPage() {
               ))}
             </div>
             <div className="mt-3 pt-3 border-t border-white/[0.04] flex flex-col gap-2.5">
-              <a href={`tel:${config.phoneE164}`} className="w-full bg-primary hover:bg-[#f7c84a] text-on-primary font-bold py-3 rounded-lg text-xs uppercase tracking-[0.1em] transition-colors duration-300 flex items-center justify-center gap-2">
+              <a href={`tel:${config.phoneE164}`} className="w-full premium-gradient text-on-primary font-bold py-3 rounded-lg text-xs uppercase tracking-[0.1em] transition-colors duration-300 flex items-center justify-center gap-2">
                 <Icon name="call" className="!text-[15px]" />
                 Call Now — {config.phone}
               </a>
@@ -466,7 +466,7 @@ export default function ApexEpoxyPage() {
         {/* Top divider */}
         <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-primary/12 to-transparent" />
         {/* Subtle diagonal crosshatch texture */}
-        <div className="absolute inset-0 opacity-[0.025]" style={{ backgroundImage: `repeating-linear-gradient(45deg, rgba(245,183,49,0.3) 0, rgba(245,183,49,0.3) 1px, transparent 0, transparent 50%), repeating-linear-gradient(-45deg, rgba(245,183,49,0.3) 0, rgba(245,183,49,0.3) 1px, transparent 0, transparent 50%)`, backgroundSize: '48px 48px' }} />
+        <div className="absolute inset-0 opacity-[0.025]" style={{ backgroundImage: `repeating-linear-gradient(45deg, rgba(235,182,36,0.3) 0, rgba(235,182,36,0.3) 1px, transparent 0, transparent 50%), repeating-linear-gradient(-45deg, rgba(235,182,36,0.3) 0, rgba(235,182,36,0.3) 1px, transparent 0, transparent 50%)`, backgroundSize: '48px 48px' }} />
 
         <div className={`${shell} relative`}>
           {/* Top row — image + intro */}
@@ -495,7 +495,7 @@ export default function ApexEpoxyPage() {
                     { icon: 'speed', title: 'Done in 1–2 Days', desc: 'Nano Chemical Primer or diamond grinding, epoxy base coat, full broadcast flakes, and UV stable top coat — all in a weekend.' },
                   ].map((point) => (
                     <div key={point.title} className="flex gap-3">
-                      <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-lg bg-primary/10 flex items-center justify-center shrink-0 mt-0.5 shadow-[0_0_0_1px_rgba(245,183,49,0.08),0_2px_8px_rgba(0,0,0,0.15)]">
+                      <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-lg bg-primary/10 flex items-center justify-center shrink-0 mt-0.5 shadow-[0_0_0_1px_rgba(235,182,36,0.08),0_2px_8px_rgba(0,0,0,0.15)]">
                         <Icon name={point.icon} className="text-primary !text-[16px] sm:!text-[18px]" />
                       </div>
                       <div>
@@ -540,7 +540,7 @@ export default function ApexEpoxyPage() {
         {/* Top divider */}
         <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-outline-variant/15 to-transparent" />
         {/* Subtle scattered dot texture */}
-        <div className="absolute inset-0 opacity-[0.02]" style={{ backgroundImage: `radial-gradient(circle at 2px 2px, rgba(245,183,49,0.5) 1.5px, transparent 0), radial-gradient(circle at 28px 18px, rgba(245,183,49,0.3) 1px, transparent 0)`, backgroundSize: '56px 56px' }} />
+        <div className="absolute inset-0 opacity-[0.02]" style={{ backgroundImage: `radial-gradient(circle at 2px 2px, rgba(235,182,36,0.5) 1.5px, transparent 0), radial-gradient(circle at 28px 18px, rgba(235,182,36,0.3) 1px, transparent 0)`, backgroundSize: '56px 56px' }} />
         <div className={`${shell} relative`}>
           <Reveal>
             <div className="text-center max-w-2xl mx-auto mb-14">
@@ -557,7 +557,7 @@ export default function ApexEpoxyPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
             {config.services.map((svc, i) => (
               <Reveal key={svc.name} delay={i > 1 ? `reveal-delay-${i - 1}` : ''}>
-                <div className="group bg-surface-container-lowest rounded-2xl overflow-hidden border border-outline-variant/8 hover:border-primary/20 transition-all duration-500 h-full flex flex-col relative shadow-[0_2px_12px_rgba(0,0,0,0.2),0_0_0_1px_rgba(255,255,255,0.02)_inset] hover:shadow-[0_8px_32px_rgba(0,0,0,0.3),0_0_20px_rgba(245,183,49,0.04)]">
+                <div className="group bg-surface-container-lowest rounded-2xl overflow-hidden border border-outline-variant/8 hover:border-primary/20 transition-all duration-500 h-full flex flex-col relative shadow-[0_2px_12px_rgba(0,0,0,0.2),0_0_0_1px_rgba(255,255,255,0.02)_inset] hover:shadow-[0_8px_32px_rgba(0,0,0,0.3),0_0_20px_rgba(235,182,36,0.04)]">
                   {/* Gold top accent */}
                   <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-primary/40 via-primary to-primary/40" />
 
@@ -567,7 +567,7 @@ export default function ApexEpoxyPage() {
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
                     {i === 0 && (
                       <div className="absolute top-4 left-4 flex items-center gap-2">
-                        <div className="bg-primary text-on-primary text-[9px] font-extrabold uppercase tracking-[0.12em] px-3 py-1.5 rounded-md flex items-center gap-1.5 shadow-[0_2px_10px_rgba(245,183,49,0.3)]">
+                        <div className="premium-gradient text-on-primary text-[9px] font-extrabold uppercase tracking-[0.12em] px-3 py-1.5 rounded-md flex items-center gap-1.5 shadow-[0_2px_10px_rgba(235,182,36,0.3)]">
                           <Icon name="star" className="text-[10px]" />
                           Most Popular
                         </div>
@@ -615,7 +615,7 @@ export default function ApexEpoxyPage() {
       {/* ══════ HOW IT WORKS + THE APEX DIFFERENCE ══════ */}
       <section className="pt-14 sm:pt-24 pb-16 sm:pb-28 bg-surface-container-lowest relative" id="process">
         {/* Subtle background texture */}
-        <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'radial-gradient(circle at 1px 1px, rgba(245,183,49,0.4) 1px, transparent 0)', backgroundSize: '40px 40px' }} />
+        <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'radial-gradient(circle at 1px 1px, rgba(235,182,36,0.4) 1px, transparent 0)', backgroundSize: '40px 40px' }} />
 
         <div className={`${shell} relative`}>
           {/* ── PROCESS ── */}
@@ -645,7 +645,7 @@ export default function ApexEpoxyPage() {
                       {/* Circle with icon */}
                       <div className="relative mx-auto w-10 h-10 sm:w-11 sm:h-11 mb-4 sm:mb-5">
                         <div className="absolute -inset-1 rounded-full bg-primary/10 animate-pulse" style={{ animationDuration: '3s' }} />
-                        <div className="absolute inset-0 rounded-full bg-primary flex items-center justify-center shadow-[0_2px_12px_rgba(245,183,49,0.2),0_0_0_3px_rgba(245,183,49,0.08)]">
+                        <div className="absolute inset-0 rounded-full premium-gradient flex items-center justify-center shadow-[0_2px_12px_rgba(235,182,36,0.2),0_0_0_3px_rgba(235,182,36,0.08)]">
                           <Icon name={icons[i]} className="text-on-primary !text-[16px] sm:!text-[18px]" />
                         </div>
                       </div>
@@ -688,10 +688,10 @@ export default function ApexEpoxyPage() {
           <Reveal>
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 sm:gap-5">
               {/* ── APEX COLUMN (featured) ── */}
-              <div className="relative rounded-xl sm:rounded-2xl border-2 border-primary/30 bg-gradient-to-b from-primary/[0.06] to-transparent p-5 sm:p-8 order-1 lg:order-2 shadow-[0_4px_24px_rgba(245,183,49,0.06),0_12px_48px_rgba(0,0,0,0.25)]">
+              <div className="relative rounded-xl sm:rounded-2xl border-2 border-primary/30 bg-gradient-to-b from-primary/[0.06] to-transparent p-5 sm:p-8 order-1 lg:order-2 shadow-[0_4px_24px_rgba(235,182,36,0.06),0_12px_48px_rgba(0,0,0,0.25)]">
                 {/* Recommended badge */}
                 <div className="absolute -top-3.5 left-1/2 -translate-x-1/2">
-                  <span className="bg-primary text-on-primary text-[10px] font-bold tracking-[0.15em] uppercase px-4 py-1.5 rounded-full whitespace-nowrap shadow-[0_2px_12px_rgba(245,183,49,0.3)]">
+                  <span className="premium-gradient text-on-primary text-[10px] font-bold tracking-[0.15em] uppercase px-4 py-1.5 rounded-full whitespace-nowrap shadow-[0_2px_12px_rgba(235,182,36,0.3)]">
                     Recommended
                   </span>
                 </div>
@@ -793,7 +793,7 @@ export default function ApexEpoxyPage() {
 
       <section className="py-16 sm:py-24 bg-surface relative" id="why-us">
         {/* Subtle terrazzo speckle texture */}
-        <div className="absolute inset-0 opacity-[0.02]" style={{ backgroundImage: `radial-gradient(circle at 8px 12px, rgba(245,183,49,0.4) 1px, transparent 0), radial-gradient(circle at 36px 40px, rgba(245,183,49,0.3) 0.8px, transparent 0), radial-gradient(circle at 22px 28px, rgba(200,191,179,0.3) 0.6px, transparent 0)`, backgroundSize: '52px 52px' }} />
+        <div className="absolute inset-0 opacity-[0.02]" style={{ backgroundImage: `radial-gradient(circle at 8px 12px, rgba(235,182,36,0.4) 1px, transparent 0), radial-gradient(circle at 36px 40px, rgba(235,182,36,0.3) 0.8px, transparent 0), radial-gradient(circle at 22px 28px, rgba(200,191,179,0.3) 0.6px, transparent 0)`, backgroundSize: '52px 52px' }} />
         <div className={`${shell} relative`}>
           <Reveal>
             <div className="text-center mb-10">
@@ -807,12 +807,12 @@ export default function ApexEpoxyPage() {
             </div>
           </Reveal>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-outline-variant/8 rounded-xl sm:rounded-2xl overflow-hidden shadow-[0_2px_20px_rgba(0,0,0,0.2),0_0_0_1px_rgba(245,183,49,0.04)]">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-outline-variant/8 rounded-xl sm:rounded-2xl overflow-hidden shadow-[0_2px_20px_rgba(0,0,0,0.2),0_0_0_1px_rgba(235,182,36,0.04)]">
             {config.whyUs.map((item, i) => (
               <Reveal key={item.title} delay={i >= 3 ? 'reveal-delay-2' : ''}>
                 <div className="p-5 sm:p-7 bg-surface hover:bg-surface-container/50 transition-all duration-300 group h-full relative">
                   <div className="absolute top-0 left-0 w-0 h-full bg-primary/80 group-hover:w-[2px] transition-all duration-300 rounded-r" />
-                  <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-lg bg-primary/10 flex items-center justify-center mb-3 sm:mb-4 group-hover:bg-primary/15 transition-colors shadow-[0_0_0_1px_rgba(245,183,49,0.06)]">
+                  <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-lg bg-primary/10 flex items-center justify-center mb-3 sm:mb-4 group-hover:bg-primary/15 transition-colors shadow-[0_0_0_1px_rgba(235,182,36,0.06)]">
                     <Icon name={item.icon} className="text-primary text-base sm:text-lg" />
                   </div>
                   <h3 className="font-headline font-extrabold text-[13px] sm:text-sm mb-1">{item.title}</h3>
@@ -862,7 +862,7 @@ export default function ApexEpoxyPage() {
       {/* ══════ SERVICE AREAS (SEO) ══════ */}
       <section className="py-10 sm:py-20 bg-surface relative" id="service-areas">
         {/* Subtle grid lines texture */}
-        <div className="absolute inset-0 opacity-[0.015]" style={{ backgroundImage: `linear-gradient(rgba(245,183,49,0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(245,183,49,0.3) 1px, transparent 1px)`, backgroundSize: '64px 64px' }} />
+        <div className="absolute inset-0 opacity-[0.015]" style={{ backgroundImage: `linear-gradient(rgba(235,182,36,0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(235,182,36,0.3) 1px, transparent 1px)`, backgroundSize: '64px 64px' }} />
         <div className={`${shell} max-w-4xl relative`}>
           <Reveal>
             <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-5 sm:gap-12">
@@ -897,7 +897,7 @@ export default function ApexEpoxyPage() {
       {/* ══════ FAQ ══════ */}
       <section className="py-12 sm:py-24 bg-surface-container-lowest relative" id="faq">
         {/* Subtle flowing curve texture */}
-        <div className="absolute inset-0 opacity-[0.02]" style={{ backgroundImage: `radial-gradient(ellipse 120px 80px at 30% 50%, rgba(245,183,49,0.15), transparent), radial-gradient(ellipse 100px 60px at 70% 30%, rgba(245,183,49,0.1), transparent)`, backgroundSize: '300px 250px' }} />
+        <div className="absolute inset-0 opacity-[0.02]" style={{ backgroundImage: `radial-gradient(ellipse 120px 80px at 30% 50%, rgba(235,182,36,0.15), transparent), radial-gradient(ellipse 100px 60px at 70% 30%, rgba(235,182,36,0.1), transparent)`, backgroundSize: '300px 250px' }} />
         <div className={`${shell} relative`}>
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-10 lg:gap-14">
             <div className="lg:col-span-4">
@@ -950,7 +950,7 @@ export default function ApexEpoxyPage() {
       <section className="py-12 sm:py-24 bg-surface" id="quote">
         <div className={shell}>
           <Reveal>
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 rounded-xl sm:rounded-2xl overflow-hidden shadow-[0_8px_32px_rgba(0,0,0,0.3),0_24px_64px_rgba(0,0,0,0.25),0_0_0_1px_rgba(245,183,49,0.06)] border border-outline-variant/8">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 rounded-xl sm:rounded-2xl overflow-hidden shadow-[0_8px_32px_rgba(0,0,0,0.3),0_24px_64px_rgba(0,0,0,0.25),0_0_0_1px_rgba(235,182,36,0.06)] border border-outline-variant/8">
               <div className="bg-surface-container-high p-5 sm:p-8 lg:p-10 relative">
                 <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-primary/0 via-primary/40 to-primary/0 lg:hidden" />
                 <SectionLabel>Free Estimate</SectionLabel>
@@ -1043,7 +1043,7 @@ export default function ApexEpoxyPage() {
                 <div className="absolute inset-0 bg-black/20" />
                 <div className="absolute bottom-8 left-8 right-8 p-5 bg-surface/90 backdrop-blur-sm rounded-xl border border-primary/15 shadow-[0_8px_32px_rgba(0,0,0,0.4)]">
                   <div className="flex items-center gap-4">
-                    <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center border border-primary/15 shadow-[0_0_12px_rgba(245,183,49,0.08)]">
+                    <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center border border-primary/15 shadow-[0_0_12px_rgba(235,182,36,0.08)]">
                       <Icon name="engineering" className="text-primary text-xl" />
                     </div>
                     <div>

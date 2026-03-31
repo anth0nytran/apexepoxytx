@@ -26,7 +26,7 @@ const displayFont = Syne({
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.apexepoxytx.com'),
   title: "Epoxy Garage Floor Coatings Cypress TX | Apex Epoxy & Surface Systems",
-  description: "Professional epoxy garage floor coatings in Cypress & Houston, TX. Flake, metallic & commercial floors. 10-year warranty. Free estimates. Call (281) 433-4346.",
+  description: "Professional epoxy garage floor coatings in Cypress & Houston, TX. Flake, metallic & commercial floors. 10-year warranty. Free estimates. Call (713) 201-4005.",
   keywords: [
     'epoxy flooring Cypress TX',
     'garage floor coating Cypress',
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "Epoxy Garage Floor Coatings in Cypress & Houston TX | Apex Epoxy",
-    description: "Professional epoxy garage floors, metallic finishes, patio coatings & commercial flooring in Cypress & Greater Houston. 10-year warranty. Free estimates. Call (281) 433-4346.",
+    description: "Professional epoxy garage floors, metallic finishes, patio coatings & commercial flooring in Cypress & Greater Houston. 10-year warranty. Free estimates. Call (713) 201-4005.",
     url: 'https://apexepoxytx.com',
     siteName: 'Apex Epoxy & Surface Systems',
     locale: 'en_US',
@@ -63,7 +63,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: "Epoxy Floor Coatings Cypress & Houston TX | Apex Epoxy",
-    description: "Garage floors, metallic epoxy, patio coatings & commercial flooring. 10-year warranty. Free estimates. Call (281) 433-4346.",
+    description: "Garage floors, metallic epoxy, patio coatings & commercial flooring. 10-year warranty. Free estimates. Call (713) 201-4005.",
     images: ['/pictures/hero.png'],
   },
   icons: {
@@ -99,7 +99,7 @@ export default function RootLayout({
               "name": "Apex Epoxy & Surface Systems",
               "@id": "https://apexepoxytx.com",
               "url": "https://apexepoxytx.com",
-              "telephone": "+12814334346",
+              "telephone": "+17132014005",
               "email": "beauscalise@apexepoxytx.com",
               "description": "Professional epoxy garage floor coatings in Cypress & Houston, TX. Flake epoxy, metallic floors, patio coatings, and commercial flooring with 10-year warranty. Owner-operated by Beau Scalise & Haden Mcdade.",
               "image": "https://apexepoxytx.com/pictures/hero.png",
