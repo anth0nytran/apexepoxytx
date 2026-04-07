@@ -68,10 +68,11 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: '/logo_mark_transparent.svg', type: 'image/svg+xml' },
+      { url: '/icon.png', type: 'image/png', sizes: '1024x1024' },
       { url: '/favicon.ico', sizes: 'any' },
     ],
-    shortcut: '/logo_mark_transparent.svg',
+    shortcut: '/favicon.ico',
+    apple: '/app-icon-apple.png',
   },
 };
 

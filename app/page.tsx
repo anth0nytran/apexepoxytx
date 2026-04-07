@@ -8,6 +8,7 @@ import { motion } from 'framer-motion';
 ──────────────────────────────────────────── */
 const config = {
   businessName: 'Apex Epoxy & Surface Systems',
+  fullLogoSrc: '/new_logo/logo_full_transparent_exact.png',
   phone: '(713) 201-4005',
   phoneE164: '+17132014005',
   email: 'beauscalise@apexepoxytx.com',
@@ -282,7 +283,7 @@ export default function ApexEpoxyPage() {
             <div className={`flex items-center justify-center transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] ${scrolled ? 'w-7 h-7' : 'w-9 h-9'}`}>
               <img
                 alt="Apex Epoxy logo mark"
-                src="/logo_mark_transparent.svg"
+                src="/new_logo/logo-transparent.svg"
                 className="h-full w-full object-contain"
               />
             </div>
@@ -474,7 +475,7 @@ export default function ApexEpoxyPage() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-14 items-center">
               {/* Logo */}
               <div className="flex items-center justify-center pt-2 sm:pt-4 pb-6 sm:pb-10">
-                <img alt="Apex Epoxy & Surface Systems logo" src="/logo_full_transparent.svg" className="w-full max-w-[300px] sm:max-w-[400px] h-auto object-contain" />
+                <img alt="Apex Epoxy & Surface Systems logo" src={config.fullLogoSrc} className="w-full max-w-[420px] sm:max-w-[520px] h-auto object-contain" />
               </div>
 
               {/* Copy side */}
@@ -698,7 +699,7 @@ export default function ApexEpoxyPage() {
                 <div className="text-center mb-7 mt-2">
                   <img
                     alt="Apex Epoxy logo mark"
-                    src="/logo_mark_transparent.svg"
+                    src="/new_logo/logo-transparent.svg"
                     className="mx-auto mb-2 h-10 w-10 object-contain"
                   />
                   <h3 className="font-headline text-lg font-extrabold text-on-surface">Apex Epoxy</h3>
@@ -1060,36 +1061,35 @@ export default function ApexEpoxyPage() {
 
       {/* ══════ FOOTER ══════ */}
       <footer className="bg-surface-container-low border-t border-outline-variant/10">
-        <div className={`${shell} pt-12 sm:pt-16 pb-10 sm:pb-14`}>
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8">
-            {/* Left column — logo + description + contact */}
-            <div className="lg:col-span-5 space-y-5">
-              <a href="#top" className="inline-block">
+        <div className={`${shell} pt-14 sm:pt-20 pb-12 sm:pb-16`}>
+          <div className="grid grid-cols-1 lg:grid-cols-4 gap-10 lg:gap-12 items-start">
+            {/* Column 1 — Logo + tagline + contact */}
+            <div className="lg:col-span-1 flex flex-col items-center lg:items-start">
+              <a href="#top" className="inline-block mb-4">
                 <img
                   alt="Apex Epoxy & Surface Systems"
-                  src="/logo_full_transparent.svg"
-                  className="h-16 sm:h-20 w-auto object-contain"
+                  src={config.fullLogoSrc}
+                  className="w-[180px] sm:w-[200px] h-auto object-contain"
                 />
               </a>
-              <p className="text-on-surface-variant/35 text-[13px] sm:text-sm max-w-sm leading-relaxed">
-                Professional epoxy flooring in Cypress &amp; Greater Houston. Owner-operated, warranty-backed, built to last.
+              <p className="text-on-surface-variant/35 text-[13px] leading-relaxed text-center lg:text-left mb-5">
+                Owner-operated. Warranty-backed. Built to last.
               </p>
-              <div className="h-px w-12 bg-primary/20" />
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2.5">
-                <a href={`tel:${config.phoneE164}`} className="flex items-center gap-2 text-sm font-bold hover:text-primary transition-colors">
-                  <Icon name="call" className="text-primary !text-[15px]" /> {config.phone}
+              <div className="space-y-2.5">
+                <a href={`tel:${config.phoneE164}`} className="flex items-center gap-2.5 text-sm font-bold hover:text-primary transition-colors">
+                  <Icon name="call" className="text-primary !text-[16px]" /> {config.phone}
                 </a>
-                <div className="flex items-center gap-2 text-sm text-on-surface-variant/35">
-                  <Icon name="schedule" className="text-primary !text-[15px] shrink-0" /> {config.hours}
+                <a href={`mailto:${config.email}`} className="flex items-center gap-2.5 text-sm text-on-surface-variant/40 hover:text-primary transition-colors">
+                  <Icon name="mail" className="text-primary !text-[16px] shrink-0" /> {config.email}
+                </a>
+                <div className="flex items-center gap-2.5 text-sm text-on-surface-variant/40">
+                  <Icon name="schedule" className="text-primary !text-[16px] shrink-0" /> {config.hours}
                 </div>
-                <a href={`mailto:${config.email}`} className="flex items-center gap-2 text-sm text-on-surface-variant/35 hover:text-primary transition-colors sm:col-span-2">
-                  <Icon name="mail" className="text-primary !text-[15px] shrink-0" /> {config.email}
-                </a>
               </div>
             </div>
 
-            {/* Middle column — Services */}
-            <div className="lg:col-span-3 lg:pl-8">
+            {/* Column 2 — Services */}
+            <div className="flex flex-col items-center lg:items-start">
               <h4 className="text-[10px] font-extrabold text-primary uppercase tracking-[0.25em] mb-4">Services</h4>
               <ul className="space-y-2.5">
                 <li><a href="#services" className="text-sm text-on-surface-variant/40 hover:text-on-surface transition-colors">Flake Epoxy Floors</a></li>
@@ -1099,15 +1099,23 @@ export default function ApexEpoxyPage() {
               </ul>
             </div>
 
-            {/* Right column — Areas + CTA */}
-            <div className="lg:col-span-4 lg:pl-4">
+            {/* Column 3 — Service Areas */}
+            <div className="flex flex-col items-center lg:items-start">
               <h4 className="text-[10px] font-extrabold text-primary uppercase tracking-[0.25em] mb-4">Service Areas</h4>
-              <div className="grid grid-cols-2 gap-x-6 gap-y-1.5 mb-6">
+              <ul className="space-y-2.5">
                 {['Cypress', 'Houston', 'Katy', 'The Woodlands', 'Spring', 'Tomball', 'Sugar Land'].map((area) => (
-                  <span key={area} className="text-sm text-on-surface-variant/40">{area}, TX</span>
+                  <li key={area} className="text-sm text-on-surface-variant/40">{area}, TX</li>
                 ))}
-              </div>
-              <a href={`tel:${config.phoneE164}`} className="w-full sm:w-auto premium-gradient text-on-primary font-bold px-8 py-3 rounded-lg text-xs uppercase tracking-[0.1em] flex items-center justify-center gap-2">
+              </ul>
+            </div>
+
+            {/* Column 4 — CTA */}
+            <div className="flex flex-col items-center lg:items-start">
+              <h4 className="text-[10px] font-extrabold text-primary uppercase tracking-[0.25em] mb-4">Get Started</h4>
+              <p className="text-on-surface-variant/35 text-[13px] leading-relaxed text-center lg:text-left mb-5">
+                Free estimates for Cypress &amp; Greater Houston.
+              </p>
+              <a href={`tel:${config.phoneE164}`} className="w-full premium-gradient text-on-primary font-bold px-8 py-3 rounded-lg text-xs uppercase tracking-[0.1em] flex items-center justify-center gap-2">
                 <Icon name="call" className="!text-[14px]" />
                 Call Now
               </a>
