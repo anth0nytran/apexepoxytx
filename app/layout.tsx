@@ -102,7 +102,7 @@ export default function RootLayout({
               "url": "https://apexepoxytx.com",
               "telephone": "+17132014005",
               "email": "beauscalise@apexepoxytx.com",
-              "description": "Professional epoxy garage floor coatings in Cypress & Houston, TX. Flake epoxy, metallic floors, patio coatings, and commercial flooring with 10-year warranty. Owner-operated by Beau Scalise & Haden Mcdade.",
+              "description": "Professional epoxy garage floor coatings in Cypress & Houston, TX. Flake epoxy, metallic floors, patio coatings, and commercial flooring with 10-year warranty. Founded by Beau Scalise & Haden Mcdade — personally with you every step.",
               "image": "https://apexepoxytx.com/pictures/hero.png",
               "sameAs": [],
               "founder": [

@@ -90,7 +90,7 @@ const config = {
 
   whyUs: [
     { icon: 'verified', title: '10-Year Warranty', desc: 'Every job backed by our written 10-year warranty. If there\'s ever an issue, we come back and make it right — period.' },
-    { icon: 'groups', title: 'Owner Operated', desc: 'Beau & Haden are on every single job site. No subcontractors, no middlemen, no runaround.' },
+    { icon: 'groups', title: 'Founder-Led, Every Step', desc: 'Beau & Haden personally manage every project and follow up with you at every stage — no subcontractors, no middlemen, no runaround.' },
     { icon: 'schedule', title: 'Fast Turnaround', desc: 'Most residential garage floors completed in just 1-2 days. We respect your time and minimize disruption.' },
     { icon: 'star', title: '100% Solids Epoxy', desc: 'We use industrial grade, 100% solids epoxy and polyaspartic top coats — not the watered down big box store stuff.' },
     { icon: 'shield', title: 'Fully Licensed & Insured', desc: 'Licensed, insured, and committed to protecting your property and your investment from start to finish.' },
@@ -432,7 +432,7 @@ export default function ApexEpoxyPage() {
           <div className={`${shell} hidden sm:grid grid-cols-4 py-3.5`}>
             {[
               { icon: 'verified', text: '10-Year Written Warranty' },
-              { icon: 'groups', text: 'Owners On Every Job' },
+              { icon: 'groups', text: 'Founder-Led, Every Step' },
               { icon: 'shield', text: 'Licensed & Fully Insured' },
               { icon: 'science', text: '100% Solids Epoxy' },
             ].map((item) => (
@@ -447,7 +447,7 @@ export default function ApexEpoxyPage() {
             <div className="flex items-center gap-5 px-5 py-3 w-max">
               {[
                 { icon: 'verified', text: '10-Yr Warranty' },
-                { icon: 'groups', text: 'Owners On Site' },
+                { icon: 'groups', text: 'Founder-Led' },
                 { icon: 'shield', text: 'Insured' },
                 { icon: 'science', text: '100% Solids' },
               ].map((item) => (
@@ -485,7 +485,7 @@ export default function ApexEpoxyPage() {
                   Cypress Epoxy Floor Contractors<br /> Who Do It Right Every Time
                 </h2>
                 <p className="text-on-surface-variant/55 text-sm sm:text-[15px] leading-[1.75] sm:leading-[1.8] mb-5 sm:mb-6">
-                  Apex Epoxy &amp; Surface Systems is a locally owned epoxy flooring company based in Cypress, Texas. We specialize in garage floors, commercial coatings, patios, and metallic finishes across the Greater Houston area. Unlike franchises or handyman services, our owners are on every single job.
+                  Apex Epoxy &amp; Surface Systems is a founder-led epoxy flooring company based in Cypress, Texas. We specialize in garage floors, commercial coatings, patios, and metallic finishes across the Greater Houston area. Unlike franchises or handyman services, our founders personally follow up with you every step of the way.
                 </p>
 
                 {/* Key selling points — scannable */}
@@ -1073,7 +1073,7 @@ export default function ApexEpoxyPage() {
                 />
               </a>
               <p className="text-on-surface-variant/35 text-[13px] leading-relaxed text-center lg:text-left mb-5">
-                Owner-operated. Warranty-backed. Built to last.
+                Founder-led. Warranty-backed. Built to last.
               </p>
               <div className="space-y-2.5">
                 <a href={`tel:${config.phoneE164}`} className="flex items-center gap-2.5 text-sm font-bold hover:text-primary transition-colors">
